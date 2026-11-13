@@ -4,11 +4,12 @@
 - `index.html` — 회원용 달력 페이지 (월별 일정, 종류·판매처 필터, 검색, 진행 중 팝업)
 - `admin.html` — 관리자 페이지 (일정·판매처·판매 상품·팝업 등록/수정/삭제 → 게시)
 - `data.json` — 모든 일정 데이터 (예시 3개 포함, 관리자 페이지에서 지우면 됨)
-- `assets/` — 공통 스타일·스크립트
+- (스타일·스크립트는 html 안에 포함되어 있어 별도 폴더 없음)
 
 ## 1. 저장소 만들고 올리기
 1. GitHub에서 새 저장소 생성 (예: `goods-calendar`, **Public**)
-2. 이 폴더 안의 파일을 전부 업로드 (Add file → Upload files)
+2. `index.html`, `admin.html`, `data.json` 3개를 저장소 맨 위(루트)에 업로드 (Add file → Upload files)
+   - 내 PC에서 `index.html`을 더블클릭해 열면 일정이 안 불러와져요. 꼭 GitHub Pages 주소로 확인하세요.
 3. Settings → Pages → Branch: `main` / `(root)` → Save
 4. 1~2분 뒤 `https://아이디.github.io/goods-calendar/` 에서 확인
 
