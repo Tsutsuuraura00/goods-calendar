@@ -1,6 +1,6 @@
 {
   "siteTitle": "굿즈 발매 캘린더",
-  "updatedAt": "2026-11-13T11:11:07.015Z",
+  "updatedAt": "2026-11-13T11:28:10.497Z",
   "shops": [
     {
       "id": "shop_mwepkj2h8axb",
@@ -14,9 +14,73 @@
       "id": "shop_mweq59d700vv",
       "name": "일본 치이카와 마켓",
       "kind": "online",
-      "url": "https://chiikawamarket.jp/ko",
+      "url": "https://chiikawamarket.jp/",
       "address": "",
-      "note": "회원가입 / 주소 등록 필수"
+      "note": "일본 공식 통판 · 치이카와쿠지 포함"
+    },
+    {
+      "id": "shop_mwevxnwqyojy",
+      "name": "CHIIKAWA SHOP in HONG KONG",
+      "kind": "offline",
+      "url": "",
+      "address": "홍콩 MOKO New Century Plaza 지하 M10 / 2층 236",
+      "note": "영업 11:30-21:30 · SNS chiikawa.shop.hk"
+    },
+    {
+      "id": "shop_mwevxnwquh9j",
+      "name": "치이카와샵 용산점",
+      "kind": "offline",
+      "url": "https://map.naver.com/p/entry/place/2014160760?lng=126.9647415&lat=37.5297718&placePath=%2Fticket%3Ffrom%3Dmap%26fromPanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202611132014%26locale%3Dko%26svcName%3Dmap_pcv5%26entry%3Dbmp&entry=plt&searchType=place&c=15.00,0,0,0,dh",
+      "address": "",
+      "note": "네이버 예약으로 방문 예약"
+    },
+    {
+      "id": "shop_mwevxnwq5gk7",
+      "name": "포토그레이",
+      "kind": "offline",
+      "url": "https://www.instagram.com/p/DfjbUaHklQX/",
+      "address": "전국 포토그레이 매장",
+      "note": ""
+    },
+    {
+      "id": "shop_mwevxnwqixm1",
+      "name": "CGV",
+      "kind": "offline",
+      "url": "",
+      "address": "",
+      "note": ""
+    },
+    {
+      "id": "shop_mwevxnwqvurt",
+      "name": "메가박스",
+      "kind": "offline",
+      "url": "",
+      "address": "",
+      "note": ""
+    },
+    {
+      "id": "shop_mwevxnwqvi48",
+      "name": "롯데시네마",
+      "kind": "offline",
+      "url": "",
+      "address": "",
+      "note": ""
+    },
+    {
+      "id": "shop_mwevxnwqpsz7",
+      "name": "씨네Q",
+      "kind": "offline",
+      "url": "",
+      "address": "",
+      "note": ""
+    },
+    {
+      "id": "shop_mwevxnwqpn3g",
+      "name": "스파오",
+      "kind": "online",
+      "url": "https://www.spao.com/",
+      "address": "",
+      "note": "공식 인스타 @spaofriends"
     }
   ],
   "events": [
@@ -65,6 +129,235 @@
       "description": "공식 일정 추후 안내",
       "link": "",
       "image": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjExMTJfMTkw%2FMDAxNzk0NDkzODY3NjYw.GjUiG5K9u7SDSF-I3VG_a57I71GYZBnUAc0g0v4zjAwg.lDTg2J5bNyJjsDUFgNKvJd8DKtMzFy4eeA7jCAudr6sg.JPEG%2FHW5e-pxaEAAcakC.jpg&type=a340"
+    },
+    {
+      "id": "ev_mwevxnwr5we0",
+      "title": "[홍콩] 치이카와샵 콩눈 봉제인형",
+      "type": "release",
+      "start": "2026-11-13",
+      "end": "",
+      "time": "11:30~21:30",
+      "shopIds": [
+        "shop_mwevxnwqyojy"
+      ],
+      "location": "MOKO New Century Plaza (지하 M10 / 2층 236)",
+      "items": [
+        {
+          "name": "Doudou Eye Doll Pendant Series",
+          "price": "HKD 79",
+          "note": "1인 1개 (한 종류만)"
+        }
+      ],
+      "description": "1인당 1개, 한 가지로 구매 제한.\n지하 매장: MOKO New Century Plaza M10\n2층 매장: MOKO New Century Plaza 2층 236\n영업시간 11:30-21:30\n출처: chiikawa.shop.hk",
+      "link": "",
+      "image": "https://cafeptthumb-phinf.pstatic.net/MjAyNjExMTNfMjM0/MDAxNzk0NTM5NTA1MDI5.mHFfnxWdQrbdJRkli9bznzd2_lBkegUhkXOpuUIh7S4g.DBwkWS98EQ9REjP9pgwg1iIBLWtwpq5AJROeG1KluIIg.PNG/image.png?type=w1600"
+    },
+    {
+      "id": "ev_mwevxnwr196s",
+      "title": "[용산점] 11월 19일 입고 리스트",
+      "type": "restock",
+      "start": "2026-11-19",
+      "end": "",
+      "time": "",
+      "shopIds": [
+        "shop_mwevxnwquh9j"
+      ],
+      "location": "치이카와샵 용산점",
+      "items": [
+        {
+          "name": "고기만두 먹을 거야 마스코트(4종)",
+          "price": "25500",
+          "note": ""
+        },
+        {
+          "name": "스웨트룩 해달 마스코트",
+          "price": "27000",
+          "note": ""
+        },
+        {
+          "name": "스웨트룩시리즈 스마트폰 스티커(8종)",
+          "price": "4500",
+          "note": ""
+        },
+        {
+          "name": "스웨트룩시리즈 키홀더(8종)",
+          "price": "11900",
+          "note": ""
+        }
+      ],
+      "description": "치이카와샵 용산점 11월 19일(목) 입고 상품.\n방문 예약은 11월 16일(월) 15:00부터 링크(네이버 예약)에서 진행.",
+      "link": "https://map.naver.com/p/entry/place/2014160760?lng=126.9647415&lat=37.5297718&placePath=%2Fticket%3Ffrom%3Dmap%26fromPanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202611132014%26locale%3Dko%26svcName%3Dmap_pcv5%26entry%3Dbmp&entry=plt&searchType=place&c=15.00,0,0,0,dh",
+      "image": "https://postfiles.pstatic.net/MjAyNjExMTNfMTAw/MDAxNzk0NTQ4MTMxODM3.bf0Fc1qhOyLckLTVoVobqLDZT3nR0kU2ljwiyqXBPeMg.fueyllkguRRcbxP2sUYGsukAmlzDnYjjADlYqj2yO6wg.JPEG/output%EF%BC%BF1168654964.jpg?type=w773"
+    },
+    {
+      "id": "ev_mwevxnwriztl",
+      "title": "[용산점] 방문 예약 오픈 (11/19 입고분)",
+      "type": "etc",
+      "start": "2026-11-16",
+      "end": "",
+      "time": "15:00",
+      "shopIds": [
+        "shop_mwevxnwquh9j"
+      ],
+      "location": "치이카와샵 용산점",
+      "items": [],
+      "description": "11월 19일(목) 입고 상품 구매를 위한 용산점 방문 예약 오픈.\n네이버 예약 링크에서 신청.",
+      "link": "https://map.naver.com/p/entry/place/2014160760?lng=126.9647415&lat=37.5297718&placePath=%2Fticket%3Ffrom%3Dmap%26fromPanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202611132014%26locale%3Dko%26svcName%3Dmap_pcv5%26entry%3Dbmp&entry=plt&searchType=place&c=15.00,0,0,0,dh",
+      "image": "https://postfiles.pstatic.net/MjAyNjExMTNfMTAw/MDAxNzk0NTQ4MTMxODM3.bf0Fc1qhOyLckLTVoVobqLDZT3nR0kU2ljwiyqXBPeMg.fueyllkguRRcbxP2sUYGsukAmlzDnYjjADlYqj2yO6wg.JPEG/output%EF%BC%BF1168654964.jpg?type=w773"
+    },
+    {
+      "id": "ev_mwevxnwrlxyw",
+      "title": "[포토그레이] 먼작귀 프레임",
+      "type": "etc",
+      "start": "2026-11-11",
+      "end": "2027-03-16",
+      "time": "",
+      "shopIds": [
+        "shop_mwevxnwq5gk7"
+      ],
+      "location": "전국 포토그레이 매장",
+      "items": [],
+      "description": "2026.11.11(수) ~ 2027.03.16(화) 전국 포토그레이 매장에서 먼작귀 프레임 운영.",
+      "link": "https://www.instagram.com/p/DfjbUaHklQX/",
+      "image": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjExMTFfMTUy%2FMDAxNzk0MzI0NzQwMjE0.YE7JdB58du1LyIDShG3zGigB4T5NuBemQ7zohICcicMg.L_LTLbjKP5XEln6cvjKSeMFw5FCj6Nh5Y8xD28PcreEg.PNG%2Fimage.png&type=a340"
+    },
+    {
+      "id": "ev_mwevxnwrtawd",
+      "title": "[극장판 치이카와] 7주차 주말 현장 증정 - CGV·메가박스",
+      "type": "etc",
+      "start": "2026-11-14",
+      "end": "2026-11-17",
+      "time": "",
+      "shopIds": [
+        "shop_mwevxnwqixm1",
+        "shop_mwevxnwqvurt"
+      ],
+      "location": "전국 CGV·메가박스",
+      "items": [
+        {
+          "name": "2차 메인 포스터 (A3, 부분 홀로그램박)",
+          "price": "",
+          "note": "현장 증정"
+        }
+      ],
+      "description": "극장판 치이카와: 인어섬의 비밀 7주차 주말 현장 증정.\n2차 메인 포스터 (A3, 부분 홀로그램박).\n자세한 내용은 극장 홈페이지 및 앱 확인.\n증정 기간: 11/14(토) ~ 11/17(화)",
+      "link": "",
+      "image": "https://cdn.topstarnews.net/news/photo/202611/16273526_2084716_3552.jpg"
+    },
+    {
+      "id": "ev_mwevxnwrkjwg",
+      "title": "[극장판 치이카와] 7주차 주말 현장 증정 - 롯데시네마",
+      "type": "etc",
+      "start": "2026-11-14",
+      "end": "2026-11-20",
+      "time": "",
+      "shopIds": [
+        "shop_mwevxnwqvi48"
+      ],
+      "location": "전국 롯데시네마",
+      "items": [
+        {
+          "name": "2차 메인 포스터 (A3, 부분 홀로그램박)",
+          "price": "",
+          "note": "현장 증정"
+        }
+      ],
+      "description": "극장판 치이카와: 인어섬의 비밀 7주차 주말 현장 증정.\n2차 메인 포스터 (A3, 부분 홀로그램박).\n자세한 내용은 극장 홈페이지 및 앱 확인.\n증정 기간: 11/14(토) ~ 11/20(금)",
+      "link": "",
+      "image": "https://cdn.topstarnews.net/news/photo/202611/16273526_2084716_3552.jpg"
+    },
+    {
+      "id": "ev_mwevxnwr3zk6",
+      "title": "[극장판 치이카와] 7주차 주말 현장 증정 - 씨네Q",
+      "type": "etc",
+      "start": "2026-11-14",
+      "end": "",
+      "time": "",
+      "shopIds": [
+        "shop_mwevxnwqpsz7"
+      ],
+      "location": "전국 씨네Q",
+      "items": [
+        {
+          "name": "2차 메인 포스터 (A3, 부분 홀로그램박)",
+          "price": "",
+          "note": "현장 증정"
+        }
+      ],
+      "description": "극장판 치이카와: 인어섬의 비밀 7주차 주말 현장 증정.\n2차 메인 포스터 (A3, 부분 홀로그램박).\n자세한 내용은 극장 홈페이지 및 앱 확인.\n증정 기간: 11/14(토) ~ 소진 시까지",
+      "link": "",
+      "image": "https://cdn.topstarnews.net/news/photo/202611/16273526_2084716_3552.jpg"
+    },
+    {
+      "id": "ev_mwevxnwr36nq",
+      "title": "[일본 치이카와마켓] 치이카와 클리닉 제1탄 굿즈 발매",
+      "type": "release",
+      "start": "2026-11-27",
+      "end": "",
+      "time": "11:00",
+      "location": "",
+      "items": [
+        {
+          "name": "치이카와 클리닉 제1탄 굿즈",
+          "price": "",
+          "note": ""
+        },
+        {
+          "name": "치이카와마켓 한정 노벨티",
+          "price": "",
+          "note": "한정 노벨티·기획 진행"
+        }
+      ],
+      "description": "#치이카와클리닉 개최. 제1탄 굿즈를 공식 통판 치이카와마켓에서 11/27(금) 11시부터 판매 시작.\n치이카와마켓 한정 노벨티 & 기획도 진행.\n자세한 내용은 치이카와마켓 공식 X 리플라이 확인.",
+      "link": "https://chiikawamarket.jp/",
+      "image": "",
+      "shopIds": [
+        "shop_mweq59d700vv"
+      ]
+    },
+    {
+      "id": "ev_mwevxnwr85sm",
+      "title": "[치이카와쿠지] 치이카와 클리닉 온라인 쿠지 (보류)",
+      "type": "lottery",
+      "start": "2026-11-27",
+      "end": "",
+      "time": "11:00",
+      "location": "",
+      "items": [
+        {
+          "name": "온라인 쿠지 한정 굿즈",
+          "price": "",
+          "note": ""
+        }
+      ],
+      "description": "※ 현재 보류 상태 — 확정되면 수정 필요.\n치이카와쿠지에서 11/27(금) 11시부터 판매 예정이었던 온라인 쿠지 한정 굿즈.",
+      "link": "https://chiikawamarket.jp/",
+      "image": "",
+      "shopIds": [
+        "shop_mweq59d700vv"
+      ]
+    },
+    {
+      "id": "ev_mwevxnwribyc",
+      "title": "[스파오] 먼작귀 후드집업 프리오더",
+      "type": "preorder",
+      "start": "2026-11-11",
+      "end": "2026-11-16",
+      "time": "11/11 11:00 ~ 11/16 08:00",
+      "shopIds": [
+        "shop_mwevxnwqpn3g"
+      ],
+      "location": "",
+      "items": [
+        {
+          "name": "먼작귀 후드집업",
+          "price": "",
+          "note": "재입고 문의 쇄도로 온라인 프리오더"
+        }
+      ],
+      "description": "재입고 문의 쇄도로 먼작귀 후드집업 상품 온라인 프리오더 오픈.\n프리오더 기간: 2026.11.11(수) 오전 11시 ~ 11.16(월) 오전 8시\n(공지 원문에는 종료일이 2027.11.16으로 표기되어 있으나 요일(월) 기준 2026.11.16로 입력)",
+      "link": "https://www.spao.com/e/event?evtNo=E261102683",
+      "image": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjExMTFfODAg%2FMDAxNzk0Mzc0MzU3MTI2.qD82pqC-7VwA4dzVWEpopkunh5STmo3Rd6f0aohU-_Ag.DM_qgKUB_x8tik46IyR378E4eWxKqszsNJiUriVgo-Mg.PNG%2F%25BD%25BA%25C6%25C4%25BF%25C0_%25B8%25D5%25C0%25DB%25B1%25CD32.png&type=a340"
     }
   ]
 }
