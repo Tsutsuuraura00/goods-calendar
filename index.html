@@ -2,9 +2,24 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>굿즈 발매 캘린더</title>
+<!-- 홈 화면 앱 설정 -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#fff8fa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#18151b" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="굿즈캘린더">
 <style>
+/* 앱 모드: 아이폰 노치·홈바 영역 피하기 */
+@media (display-mode: standalone) {
+  .wrap { padding-top: max(20px, env(safe-area-inset-top)); padding-bottom: max(60px, env(safe-area-inset-bottom)); }
+  .modal-bg { padding-top: max(16px, env(safe-area-inset-top)); }
+}
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
 
 :root {

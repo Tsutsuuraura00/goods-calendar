@@ -1,0 +1,17 @@
+{
+  "name": "굿즈 발매 캘린더",
+  "short_name": "굿즈캘린더",
+  "description": "신상 발매 · 예약 · 추첨 · 팝업스토어 일정",
+  "lang": "ko",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fff8fa",
+  "theme_color": "#fff8fa",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
