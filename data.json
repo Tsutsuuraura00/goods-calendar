@@ -1,34 +1,23 @@
 {
   "siteTitle": "굿즈 발매 캘린더",
-  "updatedAt": "2026-11-13T09:00:00.000Z",
+  "updatedAt": "2026-11-13T08:17:24.731Z",
   "shops": [
-    { "id": "shop_sample1", "name": "(예시) 공식 온라인스토어", "kind": "online", "url": "https://example.com", "address": "", "note": "회원가입 필수" },
-    { "id": "shop_sample2", "name": "(예시) 캐릭터 상설매장 홍대점", "kind": "offline", "url": "", "address": "서울 마포구 예시로 123", "note": "주말 오픈런 많음" }
-  ],
-  "events": [
     {
-      "id": "ev_sample1", "title": "(예시) 겨울 마스코트 신상 발매", "type": "release",
-      "start": "2026-11-20", "end": "", "time": "11:00",
-      "shopIds": ["shop_sample1"], "location": "",
-      "items": [
-        { "name": "마스코트 키링 A", "price": "15000", "note": "1인 2개" },
-        { "name": "마스코트 키링 B", "price": "15000", "note": "1인 2개" }
-      ],
-      "description": "예시 일정이에요. 관리자 페이지에서 수정하거나 삭제하세요.", "link": "https://example.com", "image": ""
+      "id": "shop_sample1",
+      "name": "(예시) 공식 온라인스토어",
+      "kind": "online",
+      "url": "https://example.com",
+      "address": "",
+      "note": "회원가입 필수"
     },
     {
-      "id": "ev_sample2", "title": "(예시) 연말 팝업스토어", "type": "popup",
-      "start": "2026-11-10", "end": "2026-11-30", "time": "10:30~20:00",
-      "shopIds": ["shop_sample2"], "location": "예시 백화점 B1 이벤트홀",
-      "items": [ { "name": "팝업 한정 머그컵", "price": "18000", "note": "팝업 한정" } ],
-      "description": "현장 대기 등록 후 입장", "link": "", "image": ""
-    },
-    {
-      "id": "ev_sample3", "title": "(예시) 신년 굿즈 예약판매", "type": "preorder",
-      "start": "2026-11-25", "end": "2026-12-02", "time": "",
-      "shopIds": ["shop_sample1"], "location": "",
-      "items": [ { "name": "2027 탁상 달력", "price": "22000", "note": "1월 중순 발송" } ],
-      "description": "", "link": "", "image": ""
+      "id": "shop_sample2",
+      "name": "(예시) 캐릭터 상설매장 홍대점",
+      "kind": "offline",
+      "url": "",
+      "address": "서울 마포구 예시로 123",
+      "note": "주말 오픈런 많음"
     }
-  ]
+  ],
+  "events": []
 }
