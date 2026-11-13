@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>관리자 · 굿즈 발매 캘린더</title>
+<style>
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+
+:root {
+  --bg: #fff8fa;
+  --surface: #ffffff;
+  --surface-2: #fdf1f4;
+  --line: #f1dde3;
+  --text: #2d2a32;
+  --muted: #8a8191;
+  --accent: #ff6f91;
+  --accent-ink: #ffffff;
+  --today: #fff0c2;
+  --shadow: 0 6px 24px rgba(160, 90, 110, .10);
+  --radius: 14px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #18151b; --surface: #221e26; --surface-2: #2a2530; --line: #3a3340;
+    --text: #f1ecf4; --muted: #a79eb0; --accent: #ff86a4; --today: #4a3d1e;
+    --shadow: 0 6px 24px rgba(0, 0, 0, .35);
+  }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  font-family: Pretendard, -apple-system, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.5; -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent); }
+button, input, select, textarea { font: inherit; color: inherit; }
+.wrap { max-width: 1100px; margin: 0 auto; padding: 20px 16px 60px; }
+
+/* header */
+.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+.brand { font-size: 22px; font-weight: 800; margin: 0; letter-spacing: -.02em; }
+.brand small { display: block; font-size: 12px; font-weight: 500; color: var(--muted); }
+.monthnav { display: flex; align-items: center; gap: 6px; }
+.monthnav .label { font-size: 20px; font-weight: 800; min-width: 130px; text-align: center; }
+
+.btn {
+  border: 1px solid var(--line); background: var(--surface); border-radius: 10px;
+  padding: 8px 14px; cursor: pointer; font-weight: 600; transition: background .15s, transform .05s;
+}
+.btn:hover { background: var(--surface-2); }
+.btn:active { transform: translateY(1px); }
+.btn.primary { background: var(--accent); color: var(--accent-ink); border-color: transparent; }
+.btn.primary:hover { filter: brightness(1.05); }
+.btn.danger { color: #e0445a; }
+.btn.sm { padding: 5px 10px; font-size: 13px; border-radius: 8px; }
+.btn.icon { width: 38px; height: 38px; padding: 0; display: inline-grid; place-items: center; font-size: 18px; }
+
+/* filters */
+.filters { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 14px; }
+.chipbtn {
+  border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 5px 12px;
+  font-size: 13px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; font-weight: 600;
+}
+.chipbtn .dot { width: 8px; height: 8px; border-radius: 50%; }
+.chipbtn.off { opacity: .4; }
+.filters select, .filters input, .field input, .field select, .field textarea {
+  border: 1px solid var(--line); background: var(--surface); border-radius: 10px; padding: 7px 10px; min-width: 0;
+}
+.filters input { flex: 1 1 160px; }
+
+/* ongoing popups */
+.ongoing { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 6px; margin-bottom: 14px; }
+.ongoing:empty { display: none; }
+.ongoing .card {
+  flex: 0 0 auto; min-width: 220px; max-width: 280px; background: var(--surface); border: 1px solid var(--line);
+  border-left: 4px solid var(--c); border-radius: 12px; padding: 10px 12px; cursor: pointer; box-shadow: var(--shadow);
+}
+.ongoing .card b { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ongoing .card span { font-size: 12px; color: var(--muted); }
+.sec-title { font-size: 14px; font-weight: 800; color: var(--muted); margin: 0 0 8px; }
+
+/* calendar */
+.cal { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+.cal-head, .cal-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); }
+.cal-head div { padding: 8px; text-align: center; font-size: 12px; font-weight: 700; color: var(--muted); background: var(--surface-2); }
+.cal-head div:first-child { color: #e0445a; }
+.cal-head div:last-child { color: #4a6cf7; }
+.day {
+  min-height: 112px; border-top: 1px solid var(--line); border-left: 1px solid var(--line); padding: 6px;
+  cursor: pointer; display: flex; flex-direction: column; gap: 3px; min-width: 0;
+}
+.day:nth-child(7n+1) { border-left: 0; }
+.day.other { background: color-mix(in srgb, var(--surface-2) 50%, transparent); }
+.day.other .num { opacity: .4; }
+.day.today { background: var(--today); }
+.day.sel { outline: 2px solid var(--accent); outline-offset: -2px; }
+.day .num { font-size: 13px; font-weight: 700; }
+.day.sun .num { color: #e0445a; } .day.sat .num { color: #4a6cf7; }
+.chip {
+  display: block; font-size: 11.5px; font-weight: 600; padding: 2px 6px; border-radius: 6px;
+  background: color-mix(in srgb, var(--c) 18%, transparent); color: var(--text);
+  border-left: 3px solid var(--c); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: pointer;
+}
+.more { font-size: 11px; color: var(--muted); padding-left: 4px; }
+.chips { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+
+/* list */
+.list { margin-top: 22px; }
+.list-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.list-head h2 { font-size: 17px; margin: 0; }
+.item {
+  display: flex; gap: 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+  padding: 12px 14px; margin-bottom: 8px; cursor: pointer; align-items: center;
+}
+.item:hover { border-color: var(--accent); }
+.item .date { flex: 0 0 74px; text-align: center; font-weight: 800; font-size: 15px; line-height: 1.2; }
+.item .date small { display: block; font-weight: 500; font-size: 11px; color: var(--muted); }
+.item .body { min-width: 0; flex: 1; }
+.item .title { font-weight: 700; }
+.item .meta { font-size: 12.5px; color: var(--muted); }
+.badge {
+  display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 999px;
+  background: var(--c); color: #fff; margin-right: 6px; vertical-align: 1px;
+}
+.empty { text-align: center; color: var(--muted); padding: 30px 0; }
+
+/* modal */
+.modal-bg { position: fixed; inset: 0; background: rgba(20, 10, 20, .45); display: none; align-items: center; justify-content: center; padding: 16px; z-index: 50; }
+.modal-bg.open { display: flex; }
+.modal {
+  background: var(--surface); border-radius: 18px; max-width: 560px; width: 100%; max-height: 88vh; overflow: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .3); position: relative;
+}
+.modal img.hero { width: 100%; max-height: 280px; object-fit: cover; display: block; border-radius: 18px 18px 0 0; }
+.modal .in { padding: 20px 22px 22px; }
+.modal h3 { margin: 6px 0 4px; font-size: 20px; }
+.modal .close { position: absolute; top: 10px; right: 10px; background: var(--surface); }
+.kv { display: grid; grid-template-columns: 72px 1fr; gap: 8px 10px; margin: 14px 0; font-size: 14px; }
+.kv dt { color: var(--muted); font-weight: 600; }
+.kv dd { margin: 0; }
+table.items { width: 100%; border-collapse: collapse; font-size: 14px; margin: 6px 0 14px; }
+table.items th, table.items td { padding: 7px 6px; border-bottom: 1px solid var(--line); text-align: left; }
+table.items th { font-size: 12px; color: var(--muted); }
+table.items td.p { white-space: nowrap; text-align: right; }
+.desc { white-space: pre-wrap; font-size: 14px; background: var(--surface-2); border-radius: 10px; padding: 10px 12px; }
+.shop-line { margin-bottom: 4px; }
+.shop-line small { color: var(--muted); }
+
+.foot { text-align: center; font-size: 12px; color: var(--muted); margin-top: 30px; }
+
+/* mobile: 달력 칸은 점으로, 상세는 아래 목록에서 */
+@media (max-width: 640px) {
+  .brand { font-size: 18px; }
+  .monthnav .label { font-size: 17px; min-width: 110px; }
+  .day { min-height: 58px; padding: 4px; align-items: center; }
+  .chips { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 3px; }
+  .chip { font-size: 0; width: 7px; height: 7px; padding: 0; border: 0; border-radius: 50%; background: var(--c); }
+  .more { display: none; }
+  .item .date { flex-basis: 58px; font-size: 14px; }
+  .kv { grid-template-columns: 60px 1fr; }
+}
+</style>
+<style>
+  .panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 18px; margin-bottom: 16px; }
+  .panel h2 { font-size: 16px; margin: 0 0 12px; }
+  .tabs { display: flex; gap: 6px; margin-bottom: 12px; }
+  .tabs .btn.on { background: var(--accent); color: #fff; border-color: transparent; }
+  .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 14px; }
+  .grid .full { grid-column: 1 / -1; }
+  .field { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+  .field label { font-size: 12.5px; font-weight: 700; color: var(--muted); }
+  .field textarea { min-height: 80px; resize: vertical; }
+  .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .shopchecks { display: flex; flex-wrap: wrap; gap: 6px; }
+  .shopchecks label { border: 1px solid var(--line); border-radius: 999px; padding: 4px 10px; font-size: 13px; cursor: pointer; display: inline-flex; gap: 5px; align-items: center; }
+  .shopchecks input { margin: 0; }
+  .itemrow { display: grid; grid-template-columns: 2fr 1fr 1.4fr auto; gap: 6px; margin-bottom: 6px; }
+  .itemrow input { border: 1px solid var(--line); background: var(--surface); border-radius: 8px; padding: 6px 8px; min-width: 0; }
+  .rec { display: flex; gap: 10px; align-items: center; padding: 10px 4px; border-bottom: 1px solid var(--line); }
+  .rec:last-child { border-bottom: 0; }
+  .rec .body { flex: 1; min-width: 0; }
+  .rec .t { font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .rec .m { font-size: 12.5px; color: var(--muted); }
+  .status { font-size: 13px; padding: 8px 12px; border-radius: 10px; background: var(--surface-2); margin-top: 10px; }
+  .status.err { background: #ffe3e6; color: #a3172a; }
+  .status.ok { background: #dcf5ea; color: #136b48; }
+  .dirty { color: #e0445a; font-weight: 700; font-size: 13px; }
+  details summary { cursor: pointer; font-weight: 700; }
+  .hint { font-size: 12.5px; color: var(--muted); margin: 4px 0 0; }
+  @media (max-width: 640px) {
+    .grid { grid-template-columns: 1fr; }
+    .itemrow { grid-template-columns: 1fr 1fr; }
+    .itemrow .name { grid-column: 1 / -1; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1 class="brand">관리자 페이지<small>일정 · 판매처 등록 후 [사이트에 게시]를 눌러야 반영돼요</small></h1>
+    <div class="row">
+      <span class="dirty" id="dirty" hidden>● 게시 안 된 변경사항 있음</span>
+      <a class="btn sm" href="./" target="_blank" style="text-decoration:none">사이트 보기</a>
+      <button class="btn primary" id="publish">사이트에 게시</button>
+    </div>
+  </header>
+
+  <!-- 연결 설정 -->
+  <details class="panel" id="setupBox">
+    <summary>GitHub 연결 설정</summary>
+    <div class="grid" style="margin-top:12px">
+      <div class="field"><label>GitHub 아이디 (owner)</label><input id="gOwner" placeholder="예: myname"></div>
+      <div class="field"><label>저장소 이름 (repo)</label><input id="gRepo" placeholder="예: goods-calendar"></div>
+      <div class="field"><label>브랜치</label><input id="gBranch" placeholder="main"></div>
+      <div class="field"><label>데이터 파일 경로</label><input id="gPath" placeholder="data.json"></div>
+      <div class="field full"><label>토큰 (Fine-grained personal access token, Contents 읽기/쓰기)</label>
+        <input id="gToken" type="password" placeholder="github_pat_..." autocomplete="off">
+        <p class="hint">토큰은 이 브라우저에만 저장돼요. 공용 PC에서는 쓰지 말고, 다 쓰면 [연결 해제]를 눌러주세요.</p></div>
+    </div>
+    <div class="row" style="margin-top:12px">
+      <button class="btn primary sm" id="saveConn">저장하고 불러오기</button>
+      <button class="btn sm danger" id="forget">연결 해제</button>
+      <span style="flex:1"></span>
+      <button class="btn sm" id="exportJson">data.json 다운로드</button>
+      <label class="btn sm">JSON 파일 불러오기<input type="file" id="importJson" accept=".json,application/json" hidden></label>
+    </div>
+    <div class="field" style="margin-top:12px;max-width:360px"><label>사이트 제목</label><input id="siteTitleIn"></div>
+  </details>
+  <div class="status" id="status" hidden></div>
+
+  <div class="tabs" style="margin-top:16px">
+    <button class="btn on" data-tab="events">일정 관리</button>
+    <button class="btn" data-tab="shops">판매처 관리</button>
+  </div>
+
+  <!-- 일정 -->
+  <section id="tab-events">
+    <form class="panel" id="evForm" autocomplete="off">
+      <h2 id="evFormTitle">새 일정 등록</h2>
+      <input type="hidden" name="id">
+      <div class="grid">
+        <div class="field full"><label>제목 *</label><input name="title" required placeholder="예: 하치와레 겨울 마스코트 발매"></div>
+        <div class="field"><label>종류 *</label><select name="type" id="evType"></select></div>
+        <div class="field"><label>시간 (선택)</label><input name="time" placeholder="예: 11:00 오픈 / 20시"></div>
+        <div class="field"><label>시작일 *</label><input type="date" name="start" required></div>
+        <div class="field"><label>종료일 (기간 일정·팝업이면 입력)</label><input type="date" name="end"></div>
+        <div class="field full"><label>판매처</label><div class="shopchecks" id="evShops"></div>
+          <p class="hint">판매처가 없으면 [판매처 관리] 탭에서 먼저 등록하세요.</p></div>
+        <div class="field full"><label>장소 (팝업스토어 주소·층 등)</label><input name="location" placeholder="예: 더현대 서울 B1 이벤트홀"></div>
+        <div class="field full">
+          <label>판매 상품</label>
+          <div id="itemRows"></div>
+          <div><button type="button" class="btn sm" id="addItem">+ 상품 추가</button></div>
+        </div>
+        <div class="field full"><label>상세 설명</label><textarea name="description" placeholder="구매 제한, 입장 방법, 사전예약 링크 안내 등"></textarea></div>
+        <div class="field"><label>공지/구매 링크</label><input name="link" type="url" placeholder="https://"></div>
+        <div class="field"><label>이미지 URL (선택)</label><input name="image" type="url" placeholder="https://"></div>
+      </div>
+      <div class="row" style="margin-top:14px">
+        <button class="btn primary" type="submit" id="evSubmit">등록</button>
+        <button class="btn" type="button" id="evReset">새로 작성</button>
+      </div>
+    </form>
+
+    <div class="panel">
+      <div class="row" style="justify-content:space-between;margin-bottom:6px">
+        <h2 style="margin:0">등록된 일정 <span id="evCount" style="color:var(--muted)"></span></h2>
+        <div class="row">
+          <input type="month" id="evMonth" class="btn sm" style="padding:4px 8px">
+          <button class="btn sm" id="evAll">전체</button>
+        </div>
+      </div>
+      <div id="evList"></div>
+    </div>
+  </section>
+
+  <!-- 판매처 -->
+  <section id="tab-shops" hidden>
+    <form class="panel" id="shopForm" autocomplete="off">
+      <h2 id="shopFormTitle">새 판매처 등록</h2>
+      <input type="hidden" name="id">
+      <div class="grid">
+        <div class="field"><label>판매처/사이트 이름 *</label><input name="name" required placeholder="예: 공식 온라인스토어"></div>
+        <div class="field"><label>구분</label><select name="kind">
+          <option value="online">온라인</option><option value="offline">오프라인</option><option value="both">온·오프라인</option></select></div>
+        <div class="field"><label>사이트 URL</label><input name="url" type="url" placeholder="https://"></div>
+        <div class="field"><label>주소 (오프라인 매장)</label><input name="address" placeholder="예: 서울 마포구 ..."></div>
+        <div class="field full"><label>메모</label><input name="note" placeholder="예: 회원가입 필수, 오픈런 많음"></div>
+      </div>
+      <div class="row" style="margin-top:14px">
+        <button class="btn primary" type="submit" id="shopSubmit">등록</button>
+        <button class="btn" type="button" id="shopReset">새로 작성</button>
+      </div>
+    </form>
+    <div class="panel"><h2>등록된 판매처</h2><div id="shopList"></div></div>
+  </section>
+</div>
+
+<script>
+// 공통 상수 / 유틸 — index.html, admin.html 둘 다 사용
+const TYPES = {
+  release:  { label: '발매',       color: '#ff6f91' },
+  preorder: { label: '예약판매',   color: '#6c7bff' },
+  lottery:  { label: '추첨·응모',  color: '#a46bff' },
+  popup:    { label: '팝업스토어', color: '#ff9f1c' },
+  restock:  { label: '재입고',     color: '#2bb486' },
+  etc:      { label: '기타',       color: '#8a94a6' },
+};
+const SHOP_KINDS = { online: '온라인', offline: '오프라인', both: '온·오프라인' };
+const WEEK = ['일', '월', '화', '수', '목', '금', '토'];
+
+function esc(s) {
+  return String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+function safeUrl(u) {
+  u = String(u || '').trim();
+  return /^https?:\/\//i.test(u) ? u : '';
+}
+function pad(n) { return String(n).padStart(2, '0'); }
+function ymd(d) { return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`; }
+function parseYmd(s) { const [y, m, d] = s.split('-').map(Number); return new Date(y, m - 1, d); }
+function todayStr() { return ymd(new Date()); }
+function fmtDate(s) {
+  if (!s) return '';
+  const d = parseYmd(s);
+  return `${d.getMonth() + 1}.${d.getDate()} (${WEEK[d.getDay()]})`;
+}
+function fmtRange(ev) {
+  const end = ev.end && ev.end !== ev.start ? ` ~ ${fmtDate(ev.end)}` : '';
+  const y = ev.start ? parseYmd(ev.start).getFullYear() + '. ' : '';
+  return `${y}${fmtDate(ev.start)}${end}${ev.time ? ' · ' + esc(ev.time) : ''}`;
+}
+function evEnd(ev) { return ev.end && ev.end >= ev.start ? ev.end : ev.start; }
+function uid(prefix) { return prefix + '_' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6); }
+function fmtPrice(p) {
+  if (p === '' || p == null) return '';
+  const n = Number(String(p).replace(/[^\d.]/g, ''));
+  return isNaN(n) || String(p).match(/[^\d,.\s원]/) ? esc(p) : n.toLocaleString('ko-KR') + '원';
+}
+function normalize(data) {
+  data = data || {};
+  return {
+    siteTitle: data.siteTitle || '굿즈 발매 캘린더',
+    updatedAt: data.updatedAt || '',
+    shops: Array.isArray(data.shops) ? data.shops : [],
+    events: Array.isArray(data.events) ? data.events : [],
+  };
+}
+// UTF-8 안전 base64 (GitHub API용)
+function b64encode(str) { return btoa(unescape(encodeURIComponent(str))); }
+function b64decode(b64) { return decodeURIComponent(escape(atob(b64.replace(/\s/g, '')))); }
+</script>
+<script>
+const $ = id => document.getElementById(id);
+const LS = { conn: 'gc_conn', draft: 'gc_draft' };
+const store = {
+  get(k) { try { return JSON.parse(localStorage.getItem(k)); } catch { return null; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
+  del(k) { try { localStorage.removeItem(k); } catch {} },
+};
+let DATA = normalize();
+let SHA = null;      // GitHub 파일 버전
+let dirty = false;
+
+function status(msg, kind = '') {
+  const s = $('status'); s.hidden = !msg; s.className = 'status ' + kind; s.textContent = msg;
+}
+function setDirty(v) {
+  dirty = v; $('dirty').hidden = !v;
+  if (v) store.set(LS.draft, { data: DATA, sha: SHA }); else store.del(LS.draft);
+}
+addEventListener('beforeunload', e => { if (dirty) { e.preventDefault(); e.returnValue = ''; } });
+
+// ---------- GitHub ----------
+function conn() { return store.get(LS.conn) || {}; }
+function apiUrl(c) {
+  return `https://api.github.com/repos/${encodeURIComponent(c.owner)}/${encodeURIComponent(c.repo)}/contents/${(c.path || 'data.json').split('/').map(encodeURIComponent).join('/')}`;
+}
+async function ghLoad() {
+  const c = conn();
+  if (!c.owner || !c.repo || !c.token) throw new Error('GitHub 연결 정보가 없어요');
+  const r = await fetch(apiUrl(c) + '?ref=' + encodeURIComponent(c.branch || 'main') + '&t=' + Date.now(), {
+    headers: { Authorization: 'Bearer ' + c.token, Accept: 'application/vnd.github+json' }, cache: 'no-store' });
+  if (r.status === 404) { SHA = null; return normalize(); }
+  if (!r.ok) throw new Error(`불러오기 실패 (${r.status}) — 아이디/저장소/토큰 권한을 확인하세요`);
+  const j = await r.json();
+  SHA = j.sha;
+  return normalize(JSON.parse(b64decode(j.content)));
+}
+async function ghSave() {
+  const c = conn();
+  if (!c.owner || !c.repo || !c.token) throw new Error('먼저 [GitHub 연결 설정]을 입력하세요 (또는 data.json 다운로드로 직접 업로드)');
+  DATA.updatedAt = new Date().toISOString();
+  const body = { message: `일정 업데이트 ${new Date().toLocaleString('ko-KR')}`, content: b64encode(JSON.stringify(DATA, null, 2) + '\n'), branch: c.branch || 'main' };
+  if (SHA) body.sha = SHA;
+  const r = await fetch(apiUrl(c), { method: 'PUT', headers: { Authorization: 'Bearer ' + c.token, Accept: 'application/vnd.github+json' }, body: JSON.stringify(body) });
+  if (r.status === 409 || r.status === 422) throw new Error('다른 곳에서 먼저 수정됐어요. 변경사항을 JSON으로 다운로드해 두고 새로고침 후 다시 시도하세요.');
+  if (!r.ok) throw new Error(`게시 실패 (${r.status}) — 토큰의 Contents 쓰기 권한을 확인하세요`);
+  SHA = (await r.json()).content.sha;
+}
+
+// ---------- 공통 ----------
+function formData(form) {
+  const o = {}; new FormData(form).forEach((v, k) => o[k] = String(v).trim()); return o;
+}
+function fillForm(form, obj) {
+  [...form.elements].forEach(el => { if (el.name && el.name in obj) el.value = obj[el.name] ?? ''; });
+}
+function renderAll() { renderTypeOptions(); renderShopChecks(); renderEvList(); renderShopList(); $('siteTitleIn').value = DATA.siteTitle; }
+
+// ---------- 일정 ----------
+function renderTypeOptions() {
+  const sel = $('evType'), v = sel.value;
+  sel.innerHTML = Object.entries(TYPES).map(([k, t]) => `<option value="${k}">${t.label}</option>`).join('');
+  sel.value = v || 'release';
+}
+function renderShopChecks(selected) {
+  const cur = selected || [...document.querySelectorAll('#evShops input:checked')].map(i => i.value);
+  $('evShops').innerHTML = DATA.shops.length ? DATA.shops.map(s =>
+    `<label><input type="checkbox" value="${esc(s.id)}" ${cur.includes(s.id) ? 'checked' : ''}>${esc(s.name)}</label>`).join('')
+    : '<span class="hint">등록된 판매처 없음</span>';
+}
+function addItemRow(it = {}) {
+  const div = document.createElement('div');
+  div.className = 'itemrow';
+  div.innerHTML = `<input class="name" placeholder="상품명" value="${esc(it.name || '')}">
+    <input class="price" placeholder="가격 (예: 15000)" value="${esc(it.price || '')}">
+    <input class="note" placeholder="비고 (1인 2개 등)" value="${esc(it.note || '')}">
+    <button type="button" class="btn sm danger" aria-label="삭제">×</button>`;
+  div.querySelector('button').onclick = () => div.remove();
+  $('itemRows').appendChild(div);
+}
+function resetEvForm() {
+  $('evForm').reset(); $('evForm').elements.id.value = '';
+  $('itemRows').innerHTML = ''; renderShopChecks([]);
+  $('evFormTitle').textContent = '새 일정 등록'; $('evSubmit').textContent = '등록';
+}
+function editEvent(id, asCopy) {
+  const e = DATA.events.find(x => x.id === id); if (!e) return;
+  resetEvForm();
+  fillForm($('evForm'), { ...e, id: asCopy ? '' : e.id, title: asCopy ? e.title + ' (복사)' : e.title });
+  renderShopChecks(e.shopIds || []);
+  (e.items || []).forEach(addItemRow);
+  $('evFormTitle').textContent = asCopy ? '일정 복제' : '일정 수정';
+  $('evSubmit').textContent = asCopy ? '복제 등록' : '수정 저장';
+  $('evForm').scrollIntoView({ behavior: 'smooth' });
+}
+$('evForm').onsubmit = ev => {
+  ev.preventDefault();
+  const f = formData($('evForm'));
+  if (f.end && f.end < f.start) return status('종료일이 시작일보다 빨라요', 'err');
+  const items = [...document.querySelectorAll('#itemRows .itemrow')].map(r => ({
+    name: r.querySelector('.name').value.trim(), price: r.querySelector('.price').value.trim(), note: r.querySelector('.note').value.trim(),
+  })).filter(i => i.name);
+  const rec = {
+    id: f.id || uid('ev'), title: f.title, type: f.type, start: f.start, end: f.end || '', time: f.time,
+    shopIds: [...document.querySelectorAll('#evShops input:checked')].map(i => i.value),
+    location: f.location, items, description: f.description, link: f.link, image: f.image,
+  };
+  const i = DATA.events.findIndex(x => x.id === rec.id);
+  if (i >= 0) DATA.events[i] = rec; else DATA.events.push(rec);
+  setDirty(true); resetEvForm(); renderEvList();
+  $('evMonth').value = rec.start.slice(0, 7); renderEvList();
+  status(`'${rec.title}' 저장됨 — [사이트에 게시]를 눌러야 반영돼요`, 'ok');
+};
+$('evReset').onclick = resetEvForm;
+$('addItem').onclick = () => addItemRow();
+function renderEvList() {
+  const m = $('evMonth').value;
+  let list = DATA.events.slice();
+  if (m) {
+    const s = m + '-01', e = m + '-31';
+    list = list.filter(x => x.start <= e && evEnd(x) >= s);
+  }
+  list.sort((a, b) => a.start.localeCompare(b.start));
+  $('evCount').textContent = `(${list.length}${m ? '' : ' · 전체'})`;
+  $('evList').innerHTML = list.length ? list.map(e => {
+    const t = TYPES[e.type] || TYPES.etc;
+    const shops = (e.shopIds || []).map(id => DATA.shops.find(s => s.id === id)?.name).filter(Boolean).join(', ');
+    return `<div class="rec">
+      <div class="body"><div class="t"><span class="badge" style="--c:${t.color}">${t.label}</span>${esc(e.title)}</div>
+        <div class="m">${fmtRange(e)}${shops ? ' · ' + esc(shops) : ''}${(e.items || []).length ? ` · 상품 ${e.items.length}종` : ''}</div></div>
+      <button class="btn sm" data-edit="${esc(e.id)}">수정</button>
+      <button class="btn sm" data-copy="${esc(e.id)}">복제</button>
+      <button class="btn sm danger" data-del="${esc(e.id)}">삭제</button>
+    </div>`;
+  }).join('') : '<div class="empty">일정이 없어요</div>';
+}
+$('evList').onclick = e => {
+  const b = e.target.closest('button'); if (!b) return;
+  if (b.dataset.edit) editEvent(b.dataset.edit);
+  if (b.dataset.copy) editEvent(b.dataset.copy, true);
+  if (b.dataset.del) {
+    const ev = DATA.events.find(x => x.id === b.dataset.del);
+    if (ev && confirm(`'${ev.title}' 일정을 삭제할까요?`)) {
+      DATA.events = DATA.events.filter(x => x.id !== ev.id); setDirty(true); renderEvList();
+    }
+  }
+};
+$('evMonth').onchange = renderEvList;
+$('evAll').onclick = () => { $('evMonth').value = ''; renderEvList(); };
+
+// ---------- 판매처 ----------
+function resetShopForm() {
+  $('shopForm').reset(); $('shopForm').elements.id.value = '';
+  $('shopFormTitle').textContent = '새 판매처 등록'; $('shopSubmit').textContent = '등록';
+}
+$('shopForm').onsubmit = ev => {
+  ev.preventDefault();
+  const f = formData($('shopForm'));
+  const rec = { id: f.id || uid('shop'), name: f.name, kind: f.kind, url: f.url, address: f.address, note: f.note };
+  const i = DATA.shops.findIndex(x => x.id === rec.id);
+  if (i >= 0) DATA.shops[i] = rec; else DATA.shops.push(rec);
+  setDirty(true); resetShopForm(); renderShopList(); renderShopChecks();
+  status(`판매처 '${rec.name}' 저장됨`, 'ok');
+};
+$('shopReset').onclick = resetShopForm;
+function renderShopList() {
+  $('shopList').innerHTML = DATA.shops.length ? DATA.shops.map(s => {
+    const used = DATA.events.filter(e => (e.shopIds || []).includes(s.id)).length;
+    return `<div class="rec">
+      <div class="body"><div class="t">${esc(s.name)} <small style="color:var(--muted);font-weight:500">${SHOP_KINDS[s.kind] || ''}</small></div>
+        <div class="m">${[s.url && esc(s.url), s.address && esc(s.address), s.note && esc(s.note), `일정 ${used}개`].filter(Boolean).join(' · ')}</div></div>
+      <button class="btn sm" data-edit="${esc(s.id)}">수정</button>
+      <button class="btn sm danger" data-del="${esc(s.id)}">삭제</button>
+    </div>`;
+  }).join('') : '<div class="empty">판매처가 없어요</div>';
+}
+$('shopList').onclick = e => {
+  const b = e.target.closest('button'); if (!b) return;
+  const s = DATA.shops.find(x => x.id === (b.dataset.edit || b.dataset.del)); if (!s) return;
+  if (b.dataset.edit) {
+    fillForm($('shopForm'), s);
+    $('shopFormTitle').textContent = '판매처 수정'; $('shopSubmit').textContent = '수정 저장';
+    $('shopForm').scrollIntoView({ behavior: 'smooth' });
+  } else {
+    const used = DATA.events.filter(ev => (ev.shopIds || []).includes(s.id)).length;
+    if (!confirm(`'${s.name}'을(를) 삭제할까요?${used ? `\n연결된 일정 ${used}개에서도 빠져요.` : ''}`)) return;
+    DATA.shops = DATA.shops.filter(x => x.id !== s.id);
+    DATA.events.forEach(ev => ev.shopIds = (ev.shopIds || []).filter(id => id !== s.id));
+    setDirty(true); renderAll();
+  }
+};
+
+// ---------- 탭 ----------
+document.querySelector('.tabs').onclick = e => {
+  const b = e.target.closest('[data-tab]'); if (!b) return;
+  document.querySelectorAll('.tabs .btn').forEach(x => x.classList.toggle('on', x === b));
+  $('tab-events').hidden = b.dataset.tab !== 'events';
+  $('tab-shops').hidden = b.dataset.tab !== 'shops';
+};
+
+// ---------- 설정 / 게시 ----------
+$('siteTitleIn').onchange = e => { DATA.siteTitle = e.target.value.trim() || '굿즈 발매 캘린더'; setDirty(true); };
+function fillConn() {
+  const c = conn();
+  $('gOwner').value = c.owner || ''; $('gRepo').value = c.repo || '';
+  $('gBranch').value = c.branch || 'main'; $('gPath').value = c.path || 'data.json'; $('gToken').value = c.token || '';
+}
+$('saveConn').onclick = async () => {
+  store.set(LS.conn, { owner: $('gOwner').value.trim(), repo: $('gRepo').value.trim(),
+    branch: $('gBranch').value.trim() || 'main', path: $('gPath').value.trim() || 'data.json', token: $('gToken').value.trim() });
+  if (dirty && !confirm('게시하지 않은 변경사항이 있어요. GitHub 데이터로 덮어쓸까요?')) return;
+  try { status('불러오는 중…'); DATA = await ghLoad(); setDirty(false); renderAll(); status(`연결 완료 · 일정 ${DATA.events.length}개 / 판매처 ${DATA.shops.length}개`, 'ok'); }
+  catch (err) { status(err.message, 'err'); }
+};
+$('forget').onclick = () => { store.del(LS.conn); fillConn(); status('이 브라우저에서 연결 정보를 지웠어요'); };
+$('publish').onclick = async () => {
+  try {
+    $('publish').disabled = true; status('게시 중…');
+    await ghSave(); setDirty(false);
+    status('게시 완료! GitHub Pages 반영까지 보통 1분 정도 걸려요.', 'ok');
+  } catch (err) { status(err.message, 'err'); $('setupBox').open = !conn().token; }
+  finally { $('publish').disabled = false; }
+};
+$('exportJson').onclick = () => {
+  DATA.updatedAt = new Date().toISOString();
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([JSON.stringify(DATA, null, 2) + '\n'], { type: 'application/json' }));
+  a.download = 'data.json'; a.click(); URL.revokeObjectURL(a.href);
+};
+$('importJson').onchange = async e => {
+  const f = e.target.files[0]; if (!f) return;
+  try { DATA = normalize(JSON.parse(await f.text())); setDirty(true); renderAll(); status('JSON 파일을 불러왔어요. 게시하면 사이트에 반영돼요.', 'ok'); }
+  catch { status('올바른 JSON 파일이 아니에요', 'err'); }
+  e.target.value = '';
+};
+
+// ---------- 시작 ----------
+(async function init() {
+  fillConn();
+  const now = new Date(); $('evMonth').value = `${now.getFullYear()}-${pad(now.getMonth() + 1)}`;
+  const draft = store.get(LS.draft);
+  if (draft && draft.data && confirm('게시하지 않은 작업 내용이 남아 있어요. 이어서 작업할까요?')) {
+    DATA = normalize(draft.data); SHA = draft.sha; setDirty(true); renderAll();
+    if (conn().token) { try { const cur = await (async () => { const keep = SHA; await ghLoad(); const s = SHA; SHA = keep; return s; })(); if (cur !== SHA) status('주의: 그 사이 사이트 데이터가 바뀌었어요. 게시 시 충돌이 날 수 있어요.', 'err'); } catch {} }
+    return;
+  }
+  store.del(LS.draft);
+  try {
+    if (conn().token) { DATA = await ghLoad(); status(`GitHub에서 불러옴 · 일정 ${DATA.events.length}개`, 'ok'); }
+    else {
+      const r = await fetch('data.json?t=' + Date.now()); DATA = normalize(r.ok ? await r.json() : {});
+      $('setupBox').open = true;
+      status('보기 전용으로 불러왔어요. 게시하려면 위에서 GitHub 연결을 설정하세요.');
+    }
+  } catch (err) { status(err.message, 'err'); $('setupBox').open = true; }
+  renderAll();
+})();
+</script>
+</body>
+</html>
