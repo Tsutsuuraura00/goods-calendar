@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>굿즈 발매 캘린더</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1 class="brand" id="siteTitle">굿즈 발매 캘린더<small>신상 발매 · 예약 · 추첨 · 팝업스토어 일정</small></h1>
+    <div class="monthnav">
+      <button class="btn icon" id="prev" aria-label="이전 달">‹</button>
+      <div class="label" id="monthLabel"></div>
+      <button class="btn icon" id="next" aria-label="다음 달">›</button>
+      <button class="btn sm" id="today">오늘</button>
+    </div>
+  </header>
+
+  <div id="ongoingWrap">
+    <p class="sec-title" id="ongoingTitle" hidden>지금 진행 중인 팝업스토어</p>
+    <div class="ongoing" id="ongoing"></div>
+  </div>
+
+  <div class="filters">
+    <div id="typeFilters" style="display:flex;gap:6px;flex-wrap:wrap"></div>
+    <select id="shopFilter"><option value="">전체 판매처</option></select>
+    <input id="q" type="search" placeholder="상품명·일정 검색">
+  </div>
+
+  <section class="cal" aria-label="월간 달력">
+    <div class="cal-head" id="calHead"></div>
+    <div class="cal-grid" id="calGrid"></div>
+  </section>
+
+  <section class="list">
+    <div class="list-head">
+      <h2 id="listTitle">이번 달 일정</h2>
+      <button class="btn sm" id="clearDay" hidden>달 전체 보기</button>
+    </div>
+    <div id="list"></div>
+  </section>
+
+  <p class="foot" id="updated"></p>
+</div>
+
+<div class="modal-bg" id="modalBg">
+  <div class="modal" role="dialog" aria-modal="true" id="modal"></div>
+</div>
+
+<script src="assets/common.js"></script>
+<script>
+let DATA = normalize();
+const now = new Date();
+const state = { y: now.getFullYear(), m: now.getMonth(), types: new Set(Object.keys(TYPES)), shop: '', q: '', day: null };
+const $ = id => document.getElementById(id);
+const shopById = id => DATA.shops.find(s => s.id === id);
+const isMobile = () => matchMedia('(max-width: 640px)').matches;
+
+function matches(ev) {
+  if (!state.types.has(ev.type || 'etc')) return false;
+  if (state.shop && !(ev.shopIds || []).includes(state.shop)) return false;
+  if (state.q) {
+    const hay = [ev.title, ev.description, ev.location, ...(ev.items || []).map(i => i.name),
+      ...(ev.shopIds || []).map(id => shopById(id)?.name)].join(' ').toLowerCase();
+    if (!hay.includes(state.q.toLowerCase())) return false;
+  }
+  return true;
+}
+const sortEv = (a, b) => a.start.localeCompare(b.start) || (a.time || '').localeCompare(b.time || '') || a.title.localeCompare(b.title);
+
+function renderFilters() {
+  $('typeFilters').innerHTML = Object.entries(TYPES).map(([k, t]) =>
+    `<button class="chipbtn ${state.types.has(k) ? '' : 'off'}" data-type="${k}"><span class="dot" style="background:${t.color}"></span>${t.label}</button>`).join('');
+  const sel = $('shopFilter');
+  sel.innerHTML = '<option value="">전체 판매처</option>' +
+    DATA.shops.map(s => `<option value="${esc(s.id)}">${esc(s.name)}</option>`).join('');
+  sel.value = state.shop;
+}
+
+function renderOngoing() {
+  const t = todayStr();
+  const list = DATA.events.filter(e => e.type === 'popup' && e.start <= t && evEnd(e) >= t).sort(sortEv);
+  $('ongoingTitle').hidden = !list.length;
+  $('ongoing').innerHTML = list.map(e => `
+    <div class="card" style="--c:${TYPES.popup.color}" data-id="${esc(e.id)}">
+      <b>${esc(e.title)}</b>
+      <span>~ ${fmtDate(evEnd(e))}${e.location ? ' · ' + esc(e.location) : ''}</span>
+    </div>`).join('');
+}
+
+function renderCalendar() {
+  $('monthLabel').textContent = `${state.y}년 ${state.m + 1}월`;
+  $('calHead').innerHTML = WEEK.map(w => `<div>${w}</div>`).join('');
+  const first = new Date(state.y, state.m, 1);
+  const start = new Date(state.y, state.m, 1 - first.getDay());
+  const lastDate = new Date(state.y, state.m + 1, 0).getDate();
+  const cells = Math.ceil((first.getDay() + lastDate) / 7) * 7;
+  const evs = DATA.events.filter(matches).sort(sortEv);
+  const t = todayStr();
+  let html = '';
+  for (let i = 0; i < cells; i++) {
+    const d = new Date(start); d.setDate(start.getDate() + i);
+    const ds = ymd(d);
+    const dayEvs = evs.filter(e => e.start <= ds && evEnd(e) >= ds);
+    const cls = ['day', d.getMonth() !== state.m && 'other', ds === t && 'today', ds === state.day && 'sel',
+      d.getDay() === 0 && 'sun', d.getDay() === 6 && 'sat'].filter(Boolean).join(' ');
+    const shown = dayEvs.slice(0, 3);
+    html += `<div class="${cls}" data-day="${ds}">
+      <span class="num">${d.getDate()}</span>
+      <div class="chips">${(isMobile() ? dayEvs : shown).map(e =>
+        `<span class="chip" style="--c:${(TYPES[e.type] || TYPES.etc).color}" data-id="${esc(e.id)}" title="${esc(e.title)}">${esc(e.title)}</span>`).join('')}</div>
+      ${dayEvs.length > 3 ? `<span class="more">+${dayEvs.length - 3}개 더</span>` : ''}
+    </div>`;
+  }
+  $('calGrid').innerHTML = html;
+}
+
+function renderList() {
+  const mStart = ymd(new Date(state.y, state.m, 1)), mEnd = ymd(new Date(state.y, state.m + 1, 0));
+  let evs = DATA.events.filter(matches);
+  if (state.day) {
+    evs = evs.filter(e => e.start <= state.day && evEnd(e) >= state.day);
+    $('listTitle').textContent = `${fmtDate(state.day)} 일정`;
+  } else {
+    evs = evs.filter(e => e.start <= mEnd && evEnd(e) >= mStart);
+    $('listTitle').textContent = `${state.m + 1}월 일정 (${evs.length})`;
+  }
+  $('clearDay').hidden = !state.day;
+  evs.sort(sortEv);
+  if (!evs.length) { $('list').innerHTML = '<div class="empty">등록된 일정이 없어요</div>'; return; }
+  $('list').innerHTML = evs.map(e => {
+    const t = TYPES[e.type] || TYPES.etc;
+    const d = parseYmd(e.start);
+    const shops = (e.shopIds || []).map(id => shopById(id)?.name).filter(Boolean).join(', ');
+    const range = e.end && e.end !== e.start ? `~ ${fmtDate(e.end)}` : WEEK[d.getDay()] + '요일';
+    return `<div class="item" data-id="${esc(e.id)}">
+      <div class="date">${d.getMonth() + 1}.${d.getDate()}<small>${range}</small></div>
+      <div class="body">
+        <div class="title"><span class="badge" style="--c:${t.color}">${t.label}</span>${esc(e.title)}</div>
+        <div class="meta">${[e.time && esc(e.time), shops && esc(shops), e.location && esc(e.location),
+          (e.items || []).length && `상품 ${e.items.length}종`].filter(Boolean).join(' · ')}</div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function openModal(id) {
+  const e = DATA.events.find(x => x.id === id);
+  if (!e) return;
+  const t = TYPES[e.type] || TYPES.etc;
+  const shops = (e.shopIds || []).map(shopById).filter(Boolean);
+  const img = safeUrl(e.image), link = safeUrl(e.link);
+  $('modal').innerHTML = `
+    <button class="btn icon close" aria-label="닫기" data-close>×</button>
+    ${img ? `<img class="hero" src="${esc(img)}" alt="">` : ''}
+    <div class="in">
+      <span class="badge" style="--c:${t.color}">${t.label}</span>
+      <h3>${esc(e.title)}</h3>
+      <dl class="kv">
+        <dt>일정</dt><dd>${fmtRange(e)}</dd>
+        ${e.location ? `<dt>장소</dt><dd>${esc(e.location)}</dd>` : ''}
+        ${shops.length ? `<dt>판매처</dt><dd>${shops.map(s => {
+          const u = safeUrl(s.url);
+          return `<div class="shop-line">${u ? `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(s.name)}</a>` : esc(s.name)}
+            <small>${SHOP_KINDS[s.kind] || ''}${s.address ? ' · ' + esc(s.address) : ''}</small></div>`;
+        }).join('')}</dd>` : ''}
+      </dl>
+      ${(e.items || []).length ? `
+        <table class="items"><thead><tr><th>상품</th><th>비고</th><th style="text-align:right">가격</th></tr></thead><tbody>
+        ${e.items.map(i => `<tr><td>${esc(i.name)}</td><td>${esc(i.note || '')}</td><td class="p">${fmtPrice(i.price)}</td></tr>`).join('')}
+        </tbody></table>` : ''}
+      ${e.description ? `<div class="desc">${esc(e.description)}</div>` : ''}
+      ${link ? `<p style="margin:16px 0 0"><a class="btn primary" href="${esc(link)}" target="_blank" rel="noopener" style="text-decoration:none;display:inline-block">공지 / 구매 페이지 열기</a></p>` : ''}
+    </div>`;
+  $('modalBg').classList.add('open');
+  history.replaceState(null, '', '#e=' + encodeURIComponent(id));
+}
+function closeModal() {
+  $('modalBg').classList.remove('open');
+  history.replaceState(null, '', location.pathname + location.search);
+}
+
+function render() { renderCalendar(); renderList(); }
+function go(delta) {
+  const d = new Date(state.y, state.m + delta, 1);
+  state.y = d.getFullYear(); state.m = d.getMonth(); state.day = null; render();
+}
+
+// events
+$('prev').onclick = () => go(-1);
+$('next').onclick = () => go(1);
+$('today').onclick = () => { state.y = now.getFullYear(); state.m = now.getMonth(); state.day = null; render(); };
+$('clearDay').onclick = () => { state.day = null; render(); };
+$('typeFilters').onclick = e => {
+  const b = e.target.closest('[data-type]'); if (!b) return;
+  const k = b.dataset.type;
+  // 전부 켜져 있을 때 누르면 그 종류만 보기
+  if (state.types.size === Object.keys(TYPES).length) state.types = new Set([k]);
+  else if (state.types.has(k)) { state.types.delete(k); if (!state.types.size) state.types = new Set(Object.keys(TYPES)); }
+  else state.types.add(k);
+  renderFilters(); render();
+};
+$('shopFilter').onchange = e => { state.shop = e.target.value; render(); };
+$('q').oninput = e => { state.q = e.target.value.trim(); render(); };
+$('calGrid').onclick = e => {
+  const chip = e.target.closest('.chip');
+  if (chip && !isMobile()) return openModal(chip.dataset.id);
+  const day = e.target.closest('.day'); if (!day) return;
+  state.day = state.day === day.dataset.day ? null : day.dataset.day;
+  render();
+  if (isMobile() && state.day) $('listTitle').scrollIntoView({ behavior: 'smooth', block: 'start' });
+};
+$('list').onclick = e => { const it = e.target.closest('.item'); if (it) openModal(it.dataset.id); };
+$('ongoing').onclick = e => { const c = e.target.closest('.card'); if (c) openModal(c.dataset.id); };
+$('modalBg').onclick = e => { if (e.target === $('modalBg') || e.target.closest('[data-close]')) closeModal(); };
+addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+matchMedia('(max-width: 640px)').addEventListener('change', renderCalendar);
+
+// load
+fetch('data.json?t=' + Date.now())
+  .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then(d => {
+    DATA = normalize(d);
+    document.title = DATA.siteTitle;
+    $('siteTitle').firstChild.textContent = DATA.siteTitle;
+    if (DATA.updatedAt) $('updated').textContent = '마지막 업데이트 ' + new Date(DATA.updatedAt).toLocaleString('ko-KR');
+    renderFilters(); renderOngoing(); render();
+    const m = location.hash.match(/^#e=(.+)$/);
+    if (m) {
+      const ev = DATA.events.find(x => x.id === decodeURIComponent(m[1]));
+      if (ev) { const d = parseYmd(ev.start); state.y = d.getFullYear(); state.m = d.getMonth(); render(); openModal(ev.id); }
+    }
+  })
+  .catch(() => { renderFilters(); render(); $('list').innerHTML = '<div class="empty">일정 데이터를 불러오지 못했어요 (data.json 확인)</div>'; });
+</script>
+</body>
+</html>
