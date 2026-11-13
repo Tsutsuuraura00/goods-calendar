@@ -1,6 +1,6 @@
 {
   "siteTitle": "굿즈 발매 캘린더",
-  "updatedAt": "2026-11-13T08:43:02.080Z",
+  "updatedAt": "2026-11-13T11:11:07.015Z",
   "shops": [
     {
       "id": "shop_mwepkj2h8axb",
@@ -50,7 +50,7 @@
       "items": [],
       "description": "",
       "link": "https://chiikawamarket.jp/ko",
-      "image": "https://chiikawamarket.jp/ko/collections/20261127"
+      "image": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjExMTJfMTkw%2FMDAxNzk0NDkzODY3NjYw.GjUiG5K9u7SDSF-I3VG_a57I71GYZBnUAc0g0v4zjAwg.lDTg2J5bNyJjsDUFgNKvJd8DKtMzFy4eeA7jCAudr6sg.JPEG%2FHW5e-pxaEAAcakC.jpg&type=a340"
     },
     {
       "id": "ev_mweqbj25qclh",
@@ -64,7 +64,7 @@
       "items": [],
       "description": "공식 일정 추후 안내",
       "link": "",
-      "image": ""
+      "image": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjExMTJfMTkw%2FMDAxNzk0NDkzODY3NjYw.GjUiG5K9u7SDSF-I3VG_a57I71GYZBnUAc0g0v4zjAwg.lDTg2J5bNyJjsDUFgNKvJd8DKtMzFy4eeA7jCAudr6sg.JPEG%2FHW5e-pxaEAAcakC.jpg&type=a340"
     }
   ]
 }
