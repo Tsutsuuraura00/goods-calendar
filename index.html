@@ -299,6 +299,9 @@ function renderOngoing() {
     </div>`).join('');
 }
 
+const LONG_DAYS = 7; // 이 일수 이상 이어지는 일정은 달력에 시작·종료일만 표시
+const isLong = e => e.end && (parseYmd(e.end) - parseYmd(e.start)) / 86400000 + 1 >= LONG_DAYS;
+
 function renderCalendar() {
   $('monthLabel').textContent = `${state.y}년 ${state.m + 1}월`;
   $('calHead').innerHTML = WEEK.map(w => `<div>${w}</div>`).join('');
@@ -312,14 +315,17 @@ function renderCalendar() {
   for (let i = 0; i < cells; i++) {
     const d = new Date(start); d.setDate(start.getDate() + i);
     const ds = ymd(d);
-    const dayEvs = evs.filter(e => e.start <= ds && evEnd(e) >= ds);
+    // 기간이 긴 일정(LONG_DAYS일 이상)은 시작일·종료일 칸에만 표시
+    const dayEvs = evs.filter(e => e.start <= ds && evEnd(e) >= ds && (!isLong(e) || ds === e.start || ds === evEnd(e)));
     const cls = ['day', d.getMonth() !== state.m && 'other', ds === t && 'today', ds === state.day && 'sel',
       d.getDay() === 0 && 'sun', d.getDay() === 6 && 'sat'].filter(Boolean).join(' ');
     const shown = dayEvs.slice(0, 3);
     html += `<div class="${cls}" data-day="${ds}">
       <span class="num">${d.getDate()}</span>
-      <div class="chips">${(isMobile() ? dayEvs : shown).map(e =>
-        `<span class="chip" style="--c:${(TYPES[e.type] || TYPES.etc).color}" data-id="${esc(e.id)}" title="${esc(e.title)}">${esc(e.title)}</span>`).join('')}</div>
+      <div class="chips">${(isMobile() ? dayEvs : shown).map(e => {
+        const tag = isLong(e) ? (ds === e.start ? '[시작] ' : '[종료] ') : '';
+        return `<span class="chip" style="--c:${(TYPES[e.type] || TYPES.etc).color}" data-id="${esc(e.id)}" title="${esc(tag + e.title)}">${esc(tag + e.title)}</span>`;
+      }).join('')}</div>
       ${dayEvs.length > 3 ? `<span class="more">+${dayEvs.length - 3}개 더</span>` : ''}
     </div>`;
   }
