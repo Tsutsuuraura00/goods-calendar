@@ -1,23 +1,32 @@
 {
   "siteTitle": "굿즈 발매 캘린더",
-  "updatedAt": "2026-11-13T08:17:24.731Z",
+  "updatedAt": "2026-11-13T08:23:17.647Z",
   "shops": [
     {
-      "id": "shop_sample1",
-      "name": "(예시) 공식 온라인스토어",
+      "id": "shop_mwepkj2h8axb",
+      "name": "치이카와 포켓 온라인 스토어",
       "kind": "online",
-      "url": "https://example.com",
+      "url": "https://chiikawa-pocket-goods-store.com/",
       "address": "",
-      "note": "회원가입 필수"
-    },
-    {
-      "id": "shop_sample2",
-      "name": "(예시) 캐릭터 상설매장 홍대점",
-      "kind": "offline",
-      "url": "",
-      "address": "서울 마포구 예시로 123",
-      "note": "주말 오픈런 많음"
+      "note": "회원가입 / 주소 등록 필수"
     }
   ],
-  "events": []
+  "events": [
+    {
+      "id": "ev_mwepm40a2vcy",
+      "title": "치이카와 크리스마스 마켓 온라인 발매일",
+      "type": "release",
+      "start": "2026-11-24",
+      "end": "2026-11-25",
+      "time": "11:00 오픈",
+      "shopIds": [
+        "shop_mwepkj2h8axb"
+      ],
+      "location": "",
+      "items": [],
+      "description": "",
+      "link": "https://chiikawa-pocket-goods-store.com/",
+      "image": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjEwMThfNjgg%2FMDAxNzkyMzIyNTIwOTA0.EqyBA2Yus5lKrb0EYZWIMrKdPqQBvP98sFxwWLXmO5gg.yKKvTog6d_MK7YKKWWWgmy3WsOu5P2C-WCGBJ-ezaTIg.JPEG%2Fimg11_official_xmas_hero.jpg&type=sc960_832"
+    }
+  ]
 }
