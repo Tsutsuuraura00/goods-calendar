@@ -1,6 +1,6 @@
 {
   "siteTitle": "굿즈 발매 캘린더",
-  "updatedAt": "2026-11-13T08:24:57.763Z",
+  "updatedAt": "2026-11-13T08:32:12.914Z",
   "shops": [
     {
       "id": "shop_mwepkj2h8axb",
@@ -17,7 +17,7 @@
       "title": "치이카와 크리스마스 마켓 온라인 발매일",
       "type": "release",
       "start": "2026-11-24",
-      "end": "2026-11-25",
+      "end": "",
       "time": "11:00 오픈",
       "shopIds": [
         "shop_mwepkj2h8axb"
