@@ -1,6 +1,6 @@
 {
   "siteTitle": "굿즈 발매 캘린더",
-  "updatedAt": "2026-11-13T11:28:10.497Z",
+  "updatedAt": "2026-11-13T11:32:52.829Z",
   "shops": [
     {
       "id": "shop_mwepkj2h8axb",
@@ -322,6 +322,9 @@
       "start": "2026-11-27",
       "end": "",
       "time": "11:00",
+      "shopIds": [
+        "shop_mweq59d700vv"
+      ],
       "location": "",
       "items": [
         {
@@ -330,12 +333,9 @@
           "note": ""
         }
       ],
-      "description": "※ 현재 보류 상태 — 확정되면 수정 필요.\n치이카와쿠지에서 11/27(금) 11시부터 판매 예정이었던 온라인 쿠지 한정 굿즈.",
+      "description": "※ 현재 판매 보류 상태\n치이카와쿠지에서 11/27(금) 11시부터 판매 예정이었던 온라인 쿠지 한정 굿즈.",
       "link": "https://chiikawamarket.jp/",
-      "image": "",
-      "shopIds": [
-        "shop_mweq59d700vv"
-      ]
+      "image": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjExMTNfMzUg%2FMDAxNzk0NTUzMjc3OTY2._PU7faDk533Sfd5ddZOk7yLC0AXLAkjklUQA4Diw6tEg.XMd08n_hidfH8P5sJk5pyaqQ4qIZnvwH-GZf-dH210cg.JPEG%2Fx_com_20261113-155501_image.jpg&type=a340"
     },
     {
       "id": "ev_mwevxnwribyc",
