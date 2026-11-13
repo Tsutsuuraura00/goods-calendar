@@ -1,6 +1,6 @@
 {
   "siteTitle": "굿즈 발매 캘린더",
-  "updatedAt": "2026-11-13T08:39:38.964Z",
+  "updatedAt": "2026-11-13T08:43:02.080Z",
   "shops": [
     {
       "id": "shop_mwepkj2h8axb",
@@ -51,6 +51,20 @@
       "description": "",
       "link": "https://chiikawamarket.jp/ko",
       "image": "https://chiikawamarket.jp/ko/collections/20261127"
+    },
+    {
+      "id": "ev_mweqbj25qclh",
+      "title": "치이카와 클리닉 더현대 팝업스토어",
+      "type": "popup",
+      "start": "2026-11-27",
+      "end": "2027-01-10",
+      "time": "평일 10:30~20:00, 주말 10:30~20:30(예정)",
+      "shopIds": [],
+      "location": "더현대 서울 5층 웨이브서울",
+      "items": [],
+      "description": "공식 일정 추후 안내",
+      "link": "",
+      "image": ""
     }
   ]
 }
