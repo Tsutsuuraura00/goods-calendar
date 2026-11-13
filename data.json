@@ -1,12 +1,20 @@
 {
   "siteTitle": "굿즈 발매 캘린더",
-  "updatedAt": "2026-11-13T08:32:12.914Z",
+  "updatedAt": "2026-11-13T08:39:38.964Z",
   "shops": [
     {
       "id": "shop_mwepkj2h8axb",
       "name": "치이카와 포켓 온라인 스토어",
       "kind": "online",
       "url": "https://chiikawa-pocket-goods-store.com/",
+      "address": "",
+      "note": "회원가입 / 주소 등록 필수"
+    },
+    {
+      "id": "shop_mweq59d700vv",
+      "name": "일본 치이카와 마켓",
+      "kind": "online",
+      "url": "https://chiikawamarket.jp/ko",
       "address": "",
       "note": "회원가입 / 주소 등록 필수"
     }
@@ -27,6 +35,22 @@
       "description": "",
       "link": "https://chiikawa-pocket-goods-store.com/",
       "image": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjEwMThfNjgg%2FMDAxNzkyMzIyNTIwOTA0.EqyBA2Yus5lKrb0EYZWIMrKdPqQBvP98sFxwWLXmO5gg.yKKvTog6d_MK7YKKWWWgmy3WsOu5P2C-WCGBJ-ezaTIg.JPEG%2Fimg11_official_xmas_hero.jpg&type=sc960_832"
+    },
+    {
+      "id": "ev_mweq72crna9w",
+      "title": "치이카와 클리닉 굿즈",
+      "type": "release",
+      "start": "2026-11-27",
+      "end": "",
+      "time": "11:00 오픈",
+      "shopIds": [
+        "shop_mweq59d700vv"
+      ],
+      "location": "",
+      "items": [],
+      "description": "",
+      "link": "https://chiikawamarket.jp/ko",
+      "image": "https://chiikawamarket.jp/ko/collections/20261127"
     }
   ]
 }
