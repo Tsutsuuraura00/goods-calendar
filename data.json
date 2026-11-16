@@ -1,6 +1,6 @@
 {
   "siteTitle": "굿즈 발매 캘린더",
-  "updatedAt": "2026-11-16T08:13:19.669Z",
+  "updatedAt": "2026-11-16T08:23:10.947Z",
   "shops": [
     {
       "id": "shop_mwepkj2h8axb",
@@ -105,6 +105,14 @@
       "url": "",
       "address": "",
       "note": "크레인게임 프라이즈 경품"
+    },
+    {
+      "id": "shop_mwizxkjn739j",
+      "name": "PARADE 캡슐토이",
+      "kind": "offline",
+      "url": "https://www.parade-inc.net/products/c261110",
+      "address": "전국 캡슐토이 자판기",
+      "note": "파레드(PARADE) 캡슐토이"
     }
   ],
   "events": [
@@ -550,6 +558,48 @@
       "image": "https://shop-phinf.pstatic.net/20261007_10/17913661753395LrjK_JPEG/45974992308197276_1338977921.jpg?type=o1000_webp",
       "shopIds": [
         "shop_mwevxnwqvurt"
+      ]
+    },
+    {
+      "id": "ev_mwizxkjntyzc",
+      "title": "[캡슐토이] 치이카와 클리닉 토트백",
+      "type": "release",
+      "start": "2026-11-27",
+      "end": "",
+      "time": "",
+      "location": "치이카와 클리닉 POPUP 각 회장 · 전국 캡슐토이 자판기",
+      "items": [
+        {
+          "name": "おだいじにね。",
+          "price": "500엔",
+          "note": "몸조리 잘해"
+        },
+        {
+          "name": "こんな時は!!",
+          "price": "500엔",
+          "note": "이럴 때는!!"
+        },
+        {
+          "name": "ほどよく飲酒",
+          "price": "500엔",
+          "note": "적당히 음주"
+        },
+        {
+          "name": "歯をみがこう",
+          "price": "500엔",
+          "note": "이를 닦자"
+        },
+        {
+          "name": "ないぞういろいろ",
+          "price": "500엔",
+          "note": "내장 이것저것"
+        }
+      ],
+      "description": "치이카와 클리닉 토트백 (캡슐 장난감, 총 5종, 1회 500엔)\n크기: 약 H32cm x W25cm · A4 사이즈 수납\n컴팩트하게 접을 수 있고 운반에 편리한 포켓 첨부\n\n2026년 11월 하순부터 순차 발매 예정.\n2026년 11월 27일(금)부터 시작하는 치이카와 클리닉 POPUP 각 회장 외 전국 캡슐토이 자판기에서 순차적으로 구할 수 있음.",
+      "link": "https://www.parade-inc.net/products/c261110",
+      "image": "",
+      "shopIds": [
+        "shop_mwizxkjn739j"
       ]
     }
   ]
