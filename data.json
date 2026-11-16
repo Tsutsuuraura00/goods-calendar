@@ -1,6 +1,6 @@
 {
   "siteTitle": "굿즈 발매 캘린더",
-  "updatedAt": "2026-11-16T03:26:39.221Z",
+  "updatedAt": "2026-11-16T03:30:27.347Z",
   "shops": [
     {
       "id": "shop_mwepkj2h8axb",
@@ -422,6 +422,9 @@
       "start": "2026-11-16",
       "end": "",
       "time": "",
+      "shopIds": [
+        "shop_mwip7dn4se0g"
+      ],
       "location": "일본 전국 게임센터",
       "items": [
         {
@@ -437,10 +440,7 @@
       ],
       "description": "PARADE 프라이즈. 11월 중순부터 순차 입고(정확한 날짜 미공개, 16일은 임시 기준). 작년 인기 트리의 새 디자인",
       "link": "https://parade-inc.net/products/p261107",
-      "image": "",
-      "shopIds": [
-        "shop_mwip7dn4se0g"
-      ]
+      "image": "https://www.parade-inc.net/wp-parade/wp-content/uploads/2026/10/291cc564aa6dbb74ea724aff01447a2d.jpg"
     },
     {
       "id": "ev_mwip7dn43npl",
@@ -462,7 +462,7 @@
       ],
       "description": "PARADE 프라이즈. 11월 중순부터 순차 입고(정확한 날짜 미공개, 16일은 임시 기준). 양털처럼 폭신한 시푸와 시리즈의 키링형 마스코트",
       "link": "https://parade-inc.net/products/p261102",
-      "image": "https://cafeptthumb-phinf.pstatic.net/MjAyNjExMTZfMSAg/MDAxNzk0Nzk5NDE3MTI1.YviBam2nktWlXBXDlkBNtdkxvyDsHyctkU2-9njUW-Yg.8vpKrUnlFqy860xsBLnCrWJ8OSgxJRkoHiMbNtXq7mYg.PNG/image.png?type=w1600"
+      "image": "https://www.parade-inc.net/wp-parade/wp-content/uploads/2026/10/chiikawa_sheepwa_flat_mascot_01.jpg"
     },
     {
       "id": "ev_mwipbmjpl31t",
