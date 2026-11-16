@@ -1,6 +1,6 @@
 {
   "siteTitle": "굿즈 발매 캘린더",
-  "updatedAt": "2026-11-16T08:23:10.947Z",
+  "updatedAt": "2026-11-16T08:24:55.213Z",
   "shops": [
     {
       "id": "shop_mwepkj2h8axb",
@@ -567,6 +567,9 @@
       "start": "2026-11-27",
       "end": "",
       "time": "",
+      "shopIds": [
+        "shop_mwizxkjn739j"
+      ],
       "location": "치이카와 클리닉 POPUP 각 회장 · 전국 캡슐토이 자판기",
       "items": [
         {
@@ -597,10 +600,7 @@
       ],
       "description": "치이카와 클리닉 토트백 (캡슐 장난감, 총 5종, 1회 500엔)\n크기: 약 H32cm x W25cm · A4 사이즈 수납\n컴팩트하게 접을 수 있고 운반에 편리한 포켓 첨부\n\n2026년 11월 하순부터 순차 발매 예정.\n2026년 11월 27일(금)부터 시작하는 치이카와 클리닉 POPUP 각 회장 외 전국 캡슐토이 자판기에서 순차적으로 구할 수 있음.",
       "link": "https://www.parade-inc.net/products/c261110",
-      "image": "",
-      "shopIds": [
-        "shop_mwizxkjn739j"
-      ]
+      "image": "https://www.parade-inc.net/wp-parade/wp-content/uploads/2026/11/CP_chiikawacl_tote261020_1.jpg"
     }
   ]
 }
