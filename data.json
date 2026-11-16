@@ -1,6 +1,6 @@
 {
   "siteTitle": "굿즈 발매 캘린더",
-  "updatedAt": "2026-11-16T03:07:19.701Z",
+  "updatedAt": "2026-11-16T03:26:39.221Z",
   "shops": [
     {
       "id": "shop_mwepkj2h8axb",
@@ -97,6 +97,14 @@
       "url": "",
       "address": "B1F",
       "note": ""
+    },
+    {
+      "id": "shop_mwip7dn4se0g",
+      "name": "일본 어뮤즈먼트 시설",
+      "kind": "offline",
+      "url": "",
+      "address": "",
+      "note": "크레인게임 프라이즈 경품"
     }
   ],
   "events": [
@@ -406,6 +414,77 @@
       "description": "나가노마켓 POP UP SHOP\n기간: 2026.11.27(금) ~ 12.10(목)\n운영: 월~목 10:30~20:00 / 금~일 10:30~20:30\n※ 회장 내 상황에 따라 대기하는 경우나 입장 시 인원수 제한을 하는 경우가 있음",
       "link": "",
       "image": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA3MjdfMjIx%2FMDAxNzg1MTMxMDc0NjI1.pAudl61VF2wmIavyzilbx9FIbmTF903z1H6s-oFY2fMg.zqHQADSmUb33_cp3-WuI3WNDDEKAYUNvHJzY8JTNzqUg.PNG%2F1.png&type=a340"
+    },
+    {
+      "id": "ev_mwip7dn42u3r",
+      "title": "치이카와 크리스마스 트리 프라이즈 (그린/화이트)",
+      "type": "release",
+      "start": "2026-11-16",
+      "end": "",
+      "time": "",
+      "location": "일본 전국 게임센터",
+      "items": [
+        {
+          "name": "크리스마스 트리 그린",
+          "price": "",
+          "note": "프라이즈 경품"
+        },
+        {
+          "name": "크리스마스 트리 화이트",
+          "price": "",
+          "note": "프라이즈 경품"
+        }
+      ],
+      "description": "PARADE 프라이즈. 11월 중순부터 순차 입고(정확한 날짜 미공개, 16일은 임시 기준). 작년 인기 트리의 새 디자인",
+      "link": "https://parade-inc.net/products/p261107",
+      "image": "",
+      "shopIds": [
+        "shop_mwip7dn4se0g"
+      ]
+    },
+    {
+      "id": "ev_mwip7dn43npl",
+      "title": "치이카와 시푸와 플랫 마스코트 프라이즈",
+      "type": "release",
+      "start": "2026-11-16",
+      "end": "",
+      "time": "",
+      "shopIds": [
+        "shop_mwip7dn4se0g"
+      ],
+      "location": "일본 전국 게임센터",
+      "items": [
+        {
+          "name": "시푸와 플랫 마스코트",
+          "price": "",
+          "note": "프라이즈 경품"
+        }
+      ],
+      "description": "PARADE 프라이즈. 11월 중순부터 순차 입고(정확한 날짜 미공개, 16일은 임시 기준). 양털처럼 폭신한 시푸와 시리즈의 키링형 마스코트",
+      "link": "https://parade-inc.net/products/p261102",
+      "image": "https://cafeptthumb-phinf.pstatic.net/MjAyNjExMTZfMSAg/MDAxNzk0Nzk5NDE3MTI1.YviBam2nktWlXBXDlkBNtdkxvyDsHyctkU2-9njUW-Yg.8vpKrUnlFqy860xsBLnCrWJ8OSgxJRkoHiMbNtXq7mYg.PNG/image.png?type=w1600"
+    },
+    {
+      "id": "ev_mwipbmjpl31t",
+      "title": "치이카와 프레젠트 포 유 마스코트 프라이즈",
+      "type": "release",
+      "start": "2026-11-16",
+      "end": "",
+      "time": "",
+      "shopIds": [
+        "shop_mwip7dn4se0g"
+      ],
+      "location": "일본 전국 게임센터",
+      "items": [
+        {
+          "name": "프레젠트 포 유 마스코트",
+          "price": "",
+          "note": "프라이즈 경품"
+        }
+      ],
+      "description": "PARADE 프라이즈 11월 신정보. 반짝이 자수가 들어간 마스코트. 출시일 미공개(16일은 임시 기준), 상세는 추후 공지 예정",
+      "link": "",
+      "image": "https://cafeptthumb-phinf.pstatic.net/MjAyNjExMTZfMjE5/MDAxNzk0Nzk5NTQ0MDQ1.ycvCXy3NayBcz1HGMoRiUKFpcHroxu8QaJ9Bxu6C9g0g.jhFfLTPlCTpJdt13d17xVJ9ArAwsIhBnjdSsKz1A5vIg.PNG/image.png?type=w1600"
     }
   ]
 }
