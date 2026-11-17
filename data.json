@@ -1,6 +1,6 @@
 {
   "siteTitle": "굿즈 발매 캘린더",
-  "updatedAt": "2026-11-17T01:15:34.309Z",
+  "updatedAt": "2026-11-17T04:44:00.065Z",
   "shops": [
     {
       "id": "shop_mwepkj2h8axb",
@@ -144,6 +144,14 @@
       "kind": "offline",
       "url": "",
       "address": "하와이",
+      "note": ""
+    },
+    {
+      "id": "shop_mwk7j1ibon8f",
+      "name": "Talking ODM",
+      "kind": "online",
+      "url": "https://odm-shop.talking.design/",
+      "address": "",
       "note": ""
     }
   ],
@@ -833,6 +841,22 @@
       "shopIds": [
         "shop_mwk03d03lmmo"
       ]
+    },
+    {
+      "id": "ev_mwk7jjjlw3b8",
+      "title": "[Talking ODM] 헌책방(카니) 디자인 발매",
+      "type": "release",
+      "start": "2026-11-18",
+      "end": "",
+      "time": "12:00",
+      "shopIds": [
+        "shop_mwk7j1ibon8f"
+      ],
+      "location": "",
+      "items": [],
+      "description": "",
+      "link": "https://odm-shop.talking.design/blogs/news/ck-furuhonya-2026-lp",
+      "image": "https://cdn.shopify.com/s/files/1/0786/0538/6009/files/261110______4_12.png?v=1794570799"
     }
   ]
 }
