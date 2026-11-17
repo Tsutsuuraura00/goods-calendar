@@ -1,6 +1,6 @@
 {
   "siteTitle": "굿즈 발매 캘린더",
-  "updatedAt": "2026-11-16T08:36:42.579Z",
+  "updatedAt": "2026-11-17T01:15:34.309Z",
   "shops": [
     {
       "id": "shop_mwepkj2h8axb",
@@ -113,6 +113,38 @@
       "url": "https://www.parade-inc.net/products/c261110",
       "address": "전국 캡슐토이 자판기",
       "note": "파레드(PARADE) 캡슐토이"
+    },
+    {
+      "id": "shop_mwk03d03jgy8",
+      "name": "CHIIKAWA OBANYAKI in TAIPEI",
+      "kind": "offline",
+      "url": "https://www.instagram.com/0percent.taipei/",
+      "address": "台北市大同區赤峰街41巷9號",
+      "note": "사전 예약 입장 · SNS @0percent.taipei"
+    },
+    {
+      "id": "shop_mwk03d03idb2",
+      "name": "반다이",
+      "kind": "both",
+      "url": "https://www.bandai.co.jp/",
+      "address": "",
+      "note": ""
+    },
+    {
+      "id": "shop_mwk03d03lmmo",
+      "name": "구르망디즈 라쿠텐",
+      "kind": "online",
+      "url": "https://www.rakuten.co.jp/gourmandise/",
+      "address": "",
+      "note": "라쿠텐 공식 스토어 · 예약판매"
+    },
+    {
+      "id": "shop_mwk03d033kn3",
+      "name": "ABC Stores (하와이)",
+      "kind": "offline",
+      "url": "",
+      "address": "하와이",
+      "note": ""
     }
   ],
   "events": [
@@ -601,6 +633,206 @@
       "description": "치이카와 클리닉 토트백 (캡슐 장난감, 총 5종, 1회 500엔)\n크기: 약 H32cm x W25cm · A4 사이즈 수납\n컴팩트하게 접을 수 있고 운반에 편리한 포켓 첨부\n\n2026년 11월 하순부터 순차 발매 예정.\n2026년 11월 27일(금)부터 시작하는 치이카와 클리닉 POPUP 각 회장 외 전국 캡슐토이 자판기에서 순차적으로 구할 수 있음.",
       "link": "https://www.parade-inc.net/products/c261110",
       "image": "https://www.parade-inc.net/wp-parade/wp-content/uploads/2026/11/CP_chiikawacl_tote261020_1.jpg"
+    },
+    {
+      "id": "ev_mwk03d032f84",
+      "title": "[하와이 ABC스토어] 하와이 한정 마스코트 키링",
+      "type": "release",
+      "start": "2026-11-09",
+      "end": "",
+      "time": "",
+      "location": "하와이 ABC Stores",
+      "items": [
+        {
+          "name": "하와이 한정 마스코트 키링 · 하치와레",
+          "price": "가격 미정",
+          "note": "우쿨렐레"
+        },
+        {
+          "name": "하와이 한정 마스코트 키링 · 치이카와",
+          "price": "가격 미정",
+          "note": "I LOVE HAWAII"
+        },
+        {
+          "name": "하와이 한정 마스코트 키링 · 우사기",
+          "price": "가격 미정",
+          "note": "파인애플"
+        }
+      ],
+      "description": "하와이 ABC Stores 한정 치이카와 마스코트 키링 (3종) 11/9 발매.\n출처: X 게시물",
+      "link": "https://x.com/iamlux_givemecs/status/2118510886088589397",
+      "image": "",
+      "shopIds": [
+        "shop_mwk03d033kn3"
+      ]
+    },
+    {
+      "id": "ev_mwk03d03zpg0",
+      "title": "[일본 치이카와마켓] 11/20 신상 발매",
+      "type": "release",
+      "start": "2026-11-20",
+      "end": "",
+      "time": "11:00",
+      "location": "",
+      "items": [
+        {
+          "name": "마그넷 컬렉션껌 (랜덤/BOX)",
+          "price": "3,080엔",
+          "note": "ENSKY"
+        },
+        {
+          "name": "마시멜로풍 스티커",
+          "price": "495엔",
+          "note": "ENSKY"
+        },
+        {
+          "name": "데코스티커 (전 36종/BOX)",
+          "price": "3,300엔",
+          "note": "ENSKY · 껌 포함"
+        },
+        {
+          "name": "캐라맛네츠5 마그넷 (전 21종/랜덤)",
+          "price": "297엔",
+          "note": "반다이"
+        },
+        {
+          "name": "TSUYOKU NATTA 티셔츠 (M/L/XL)",
+          "price": "4,180엔",
+          "note": "마지컬 치이카와"
+        },
+        {
+          "name": "TSUYOKU NATTA 토트백",
+          "price": "4,950엔",
+          "note": "마지컬 치이카와"
+        },
+        {
+          "name": "긴소매 티셔츠 (2종, M/L)",
+          "price": "4,950엔",
+          "note": "하치와레(화이트) / 우사기(블랙)"
+        },
+        {
+          "name": "지퍼파카 (M/L)",
+          "price": "6,600엔",
+          "note": "마지컬 치이카와"
+        }
+      ],
+      "description": "일본 치이카와마켓 11월 20일(금) 오전 11시 신상 발매.\n· 캔디토이: 마그넷 컬렉션껌, 마시멜로풍 스티커, 데코스티커, 캐라맛네츠5\n· 의류·잡화 (TSUYOKU NATTA / MAGICAL CHIIKAWA): 티셔츠, 토트백, 긴소매 티셔츠, 지퍼파카\n출처: 치이카와마켓 공식 X",
+      "link": "https://x.com/chiikawa_market/status/2122254124276416873",
+      "image": "https://pbs.twimg.com/media/HXPC3_pbQAAo0VV?format=jpg&name=large",
+      "shopIds": [
+        "shop_mweq59d700vv"
+      ]
+    },
+    {
+      "id": "ev_mwk03d032sew",
+      "title": "[대만] CHIIKAWA OBANYAKI in TAIPEI 오픈",
+      "type": "popup",
+      "start": "2026-11-21",
+      "end": "",
+      "time": "12:00~20:00 (마지막 입장 19:30)",
+      "location": "台北市大同區赤峰街41巷9號 (중산역·쌍련역 인근)",
+      "items": [
+        {
+          "name": "치이카와 오방야키 (크림)",
+          "price": "NT$95",
+          "note": "1인 종류별 2개까지"
+        },
+        {
+          "name": "하치와레 오방야키 (팥)",
+          "price": "NT$95",
+          "note": "1인 종류별 2개까지"
+        },
+        {
+          "name": "우사기 오방야키 (고구마)",
+          "price": "NT$95",
+          "note": "1인 종류별 2개까지"
+        },
+        {
+          "name": "오방야키 쿠션 (3종)",
+          "price": "NT$780",
+          "note": "타이베이점 한정 · 1인 종류별 1개"
+        },
+        {
+          "name": "미니 오방야키 마스코트 (3종)",
+          "price": "NT$390",
+          "note": "타이베이점 한정 · 1인 종류별 1개"
+        },
+        {
+          "name": "대만 홍차 / 금훤 우롱차",
+          "price": "NT$90",
+          "note": "삼총사가 그려진 보틀"
+        }
+      ],
+      "description": "CHIIKAWA OBANYAKI in TAIPEI 2026년 11월 21일(토) 오픈.\n위치: 台北市大同區赤峰街41巷9號 (중산역·쌍련역 인근)\n영업: 12:00~20:00 / 마지막 입장 19:30\n\n오픈 기간에는 사전 예약 후 입장!\n예약 일정과 방법은 추후 공식 SNS @0percent.taipei 로 안내 예정.",
+      "link": "https://www.instagram.com/0percent.taipei/",
+      "image": "https://cafeptthumb-phinf.pstatic.net/MjAyNjEwMzFfMTkx/MDAxNzkzNDUxMjIzMjA3.Oj37h92DyRiRNKCUJ3diHF1bScARJFSpi5yYHh_uEN0g.39QNHOS5mki3nHyvo6ZFocceG7AabYB8_Cyg_hwurRAg.JPEG/IMG%EF%BC%BF3515.jpg?type=w1600",
+      "shopIds": [
+        "shop_mwk03d03jgy8"
+      ]
+    },
+    {
+      "id": "ev_mwk03d033y59",
+      "title": "[반다이] 북마크 콜렉션 치이카와 ver.6",
+      "type": "release",
+      "start": "2026-12-21",
+      "end": "",
+      "time": "",
+      "location": "",
+      "items": [
+        {
+          "name": "북마크 콜렉션 치이카와 ver.6",
+          "price": "110엔",
+          "note": "노멀 23종 · 스페셜 2종 중 랜덤"
+        }
+      ],
+      "description": "반다이 북마크 콜렉션 치이카와 ver.6 발매.\n노멀 23종, 스페셜 2종 중 랜덤.",
+      "link": "https://www.bandai.co.jp/catalog/item.php?jan_cd=4582770092813000",
+      "image": "https://bandai-a.akamaihd.net/bc/img/model/b/1000257499_2.jpg",
+      "shopIds": [
+        "shop_mwk03d03idb2"
+      ]
+    },
+    {
+      "id": "ev_mwk03d037g5q",
+      "title": "[구르망디즈] 치이카와 자격증 카드형 스마트폰 스탠드",
+      "type": "release",
+      "start": "2027-01-15",
+      "end": "",
+      "time": "1월 중순 예정",
+      "location": "",
+      "items": [
+        {
+          "name": "スーパーアルバイター (슈퍼 알바생)",
+          "price": "880엔",
+          "note": ""
+        },
+        {
+          "name": "酒 (술)",
+          "price": "880엔",
+          "note": ""
+        },
+        {
+          "name": "草むしり5級 · 하치와레",
+          "price": "880엔",
+          "note": ""
+        },
+        {
+          "name": "草むしり5級 · 치이카와",
+          "price": "880엔",
+          "note": ""
+        },
+        {
+          "name": "草むしり2級 · 우사기",
+          "price": "880엔",
+          "note": ""
+        }
+      ],
+      "description": "치이카와 자격증 카드형 스마트폰 스탠드, 총 5종, 개당 880엔.\n2027년 1월 중순 발매 예정 (정확한 날짜 미정 → 1/15로 임시 입력).\n라쿠텐 공식 스토어에서 예약판매 중, 이후 치이카와 마켓에도 발매 예정.",
+      "link": "https://item.rakuten.co.jp/gourmandise/ck-126/",
+      "image": "https://image.rakuten.co.jp/gourmandise/cabinet/slka_std/ck-126_r.jpg",
+      "shopIds": [
+        "shop_mwk03d03lmmo"
+      ]
     }
   ]
 }
