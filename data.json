@@ -1,6 +1,6 @@
 {
   "siteTitle": "굿즈 발매 캘린더",
-  "updatedAt": "2026-11-17T04:44:00.065Z",
+  "updatedAt": "2026-11-18T01:01:14.077Z",
   "shops": [
     {
       "id": "shop_mwepkj2h8axb",
@@ -31,7 +31,7 @@
       "name": "치이카와샵 용산점",
       "kind": "offline",
       "url": "https://map.naver.com/p/entry/place/2014160760?lng=126.9647415&lat=37.5297718&placePath=%2Fticket%3Ffrom%3Dmap%26fromPanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202611132014%26locale%3Dko%26svcName%3Dmap_pcv5%26entry%3Dbmp&entry=plt&searchType=place&c=15.00,0,0,0,dh",
-      "address": "",
+      "address": "서울 용산구",
       "note": "네이버 예약으로 방문 예약"
     },
     {
@@ -46,33 +46,33 @@
       "id": "shop_mwevxnwqixm1",
       "name": "CGV",
       "kind": "offline",
-      "url": "",
+      "url": "https://www.cgv.co.kr",
       "address": "",
-      "note": ""
+      "note": "영화관"
     },
     {
       "id": "shop_mwevxnwqvurt",
       "name": "메가박스",
       "kind": "offline",
-      "url": "",
+      "url": "https://www.megabox.co.kr",
       "address": "",
-      "note": ""
+      "note": "영화관"
     },
     {
       "id": "shop_mwevxnwqvi48",
       "name": "롯데시네마",
       "kind": "offline",
-      "url": "",
+      "url": "https://www.lottecinema.co.kr",
       "address": "",
-      "note": ""
+      "note": "영화관"
     },
     {
       "id": "shop_mwevxnwqpsz7",
       "name": "씨네Q",
       "kind": "offline",
-      "url": "",
+      "url": "https://www.cineq.co.kr",
       "address": "",
-      "note": ""
+      "note": "영화관"
     },
     {
       "id": "shop_mwevxnwqpn3g",
@@ -153,6 +153,30 @@
       "url": "https://odm-shop.talking.design/",
       "address": "",
       "note": ""
+    },
+    {
+      "id": "shop_mwlemhp18m5u",
+      "name": "타오바오 미니소 공식점",
+      "kind": "online",
+      "url": "https://www.taobao.com",
+      "address": "",
+      "note": "중국 타오바오 MINISO 공식점"
+    },
+    {
+      "id": "shop_mwlemhp1l036",
+      "name": "모트모트 공식몰",
+      "kind": "online",
+      "url": "https://motemote.kr",
+      "address": "",
+      "note": ""
+    },
+    {
+      "id": "shop_mwlemhp1jlwn",
+      "name": "치이카와 마켓",
+      "kind": "online",
+      "url": "https://chiikawamarket.jp",
+      "address": "",
+      "note": "일본 공식 통판"
     }
   ],
   "events": [
@@ -857,6 +881,264 @@
       "description": "",
       "link": "https://odm-shop.talking.design/blogs/news/ck-furuhonya-2026-lp",
       "image": "https://cdn.shopify.com/s/files/1/0786/0538/6009/files/261110______4_12.png?v=1794570799"
+    },
+    {
+      "id": "ev_mwlemhp2vjly",
+      "title": "치이카와샵 용산점 현장 웨이팅",
+      "type": "etc",
+      "start": "2026-11-20",
+      "end": "2026-11-22",
+      "time": "",
+      "location": "치이카와샵 용산점",
+      "items": [],
+      "description": "네이버 예약 오류('예약 확인중' 표시)로 회차별 잔여 인원은 현장 웨이팅 접수 후 순차 입장. 19일(목) 예약 인원은 마감. 잔여 인원에 따라 웨이팅 접수가 일찍 마감될 수 있음",
+      "link": "",
+      "image": "",
+      "shopIds": [
+        "shop_mwevxnwquh9j"
+      ]
+    },
+    {
+      "id": "ev_mwlemhp20kse",
+      "title": "타오바오 미니소 × 치이카와 신상 발매",
+      "type": "release",
+      "start": "2026-11-23",
+      "end": "",
+      "time": "00:00 (중국 시간, 한국 01:00)",
+      "location": "",
+      "items": [
+        {
+          "name": "피규어",
+          "price": "¥49.9",
+          "note": ""
+        },
+        {
+          "name": "목걸이 스트랩 굿즈",
+          "price": "¥59",
+          "note": ""
+        },
+        {
+          "name": "털모자 마스코트 키링",
+          "price": "¥49.9",
+          "note": ""
+        },
+        {
+          "name": "데님 토트백",
+          "price": "¥69.9",
+          "note": ""
+        }
+      ],
+      "description": "11월 23일 0시(중국 시간) 4종 신상 발매. 상품명은 이미지를 보고 붙인 이름",
+      "link": "",
+      "image": "",
+      "shopIds": [
+        "shop_mwlemhp18m5u"
+      ]
+    },
+    {
+      "id": "ev_mwlemhp2mhrb",
+      "title": "극장판 치이카와 8주차 주말 현장 증정 (CGV·메가박스)",
+      "type": "etc",
+      "start": "2026-11-21",
+      "end": "2026-11-24",
+      "time": "",
+      "location": "",
+      "items": [
+        {
+          "name": "나가노 선생님 카키오로시 클리어카드 4종",
+          "price": "0",
+          "note": "랜덤 1종 증정"
+        }
+      ],
+      "description": "극장판 『치이카와 인어섬의 비밀』 관람 특전. 자세한 내용은 극장 홈페이지·앱 확인",
+      "link": "",
+      "image": "",
+      "shopIds": [
+        "shop_mwevxnwqixm1",
+        "shop_mwevxnwqvurt"
+      ]
+    },
+    {
+      "id": "ev_mwlemhp2acmm",
+      "title": "극장판 치이카와 8주차 주말 현장 증정 (롯데시네마)",
+      "type": "etc",
+      "start": "2026-11-21",
+      "end": "2026-11-27",
+      "time": "",
+      "location": "",
+      "items": [
+        {
+          "name": "나가노 선생님 카키오로시 클리어카드 4종",
+          "price": "0",
+          "note": "랜덤 1종 증정"
+        }
+      ],
+      "description": "극장판 『치이카와 인어섬의 비밀』 관람 특전. 자세한 내용은 극장 홈페이지·앱 확인",
+      "link": "",
+      "image": "",
+      "shopIds": [
+        "shop_mwevxnwqvi48"
+      ]
+    },
+    {
+      "id": "ev_mwlemhp2y2eu",
+      "title": "극장판 치이카와 8주차 주말 현장 증정 (씨네Q)",
+      "type": "etc",
+      "start": "2026-11-21",
+      "end": "",
+      "time": "",
+      "location": "",
+      "items": [
+        {
+          "name": "나가노 선생님 카키오로시 클리어카드 4종",
+          "price": "0",
+          "note": "랜덤 1종 증정"
+        }
+      ],
+      "description": "극장판 『치이카와 인어섬의 비밀』 관람 특전. 소진 시까지 증정. 자세한 내용은 극장 홈페이지·앱 확인",
+      "link": "",
+      "image": "",
+      "shopIds": [
+        "shop_mwevxnwqpsz7"
+      ]
+    },
+    {
+      "id": "ev_mwlemhp2jfb4",
+      "title": "극장판 치이카와 응원봉 상영회 (11/28)",
+      "type": "etc",
+      "start": "2026-11-28",
+      "end": "",
+      "time": "",
+      "location": "메가박스 대구신세계(동대구), 목동, 송도(트리플스트리트), 수원AK플라자(수원역)",
+      "items": [
+        {
+          "name": "종이 슬로건 3종 세트",
+          "price": "0",
+          "note": ""
+        }
+      ],
+      "description": "극장판 『치이카와 인어섬의 비밀』 응원봉 상영회. 자세한 내용은 극장 홈페이지·앱 확인",
+      "link": "",
+      "image": "",
+      "shopIds": [
+        "shop_mwevxnwqvurt"
+      ]
+    },
+    {
+      "id": "ev_mwlemhp2n6wj",
+      "title": "극장판 치이카와 응원봉 상영회 (11/29)",
+      "type": "etc",
+      "start": "2026-11-29",
+      "end": "",
+      "time": "",
+      "location": "메가박스 대전신세계아트앤사이언스, 코엑스, 홍대",
+      "items": [
+        {
+          "name": "종이 슬로건 3종 세트",
+          "price": "0",
+          "note": ""
+        }
+      ],
+      "description": "극장판 『치이카와 인어섬의 비밀』 응원봉 상영회. 자세한 내용은 극장 홈페이지·앱 확인",
+      "link": "",
+      "image": "",
+      "shopIds": [
+        "shop_mwevxnwqvurt"
+      ]
+    },
+    {
+      "id": "ev_mwlemhp2crur",
+      "title": "먼작귀 예약판매 (모트모트)",
+      "type": "preorder",
+      "start": "2026-11-20",
+      "end": "2026-11-23",
+      "time": "11/20 18:00 ~ 11/23 23:59",
+      "location": "",
+      "items": [
+        {
+          "name": "먼작귀 다이어리 노트 SET - 치이카와",
+          "price": "35800",
+          "note": "무료배송"
+        },
+        {
+          "name": "먼작귀 다이어리 노트 SET - 가르마",
+          "price": "35800",
+          "note": "무료배송"
+        },
+        {
+          "name": "먼작귀 다이어리 노트 SET - 토끼",
+          "price": "35800",
+          "note": "무료배송"
+        },
+        {
+          "name": "먼작귀 다이어리 노트 SET - 하늘다람쥐",
+          "price": "35800",
+          "note": "무료배송"
+        },
+        {
+          "name": "먼작귀 뽀모도로 타이머",
+          "price": "",
+          "note": ""
+        }
+      ],
+      "description": "2027년 2월까지 제작 완료되는 수량부터 순차 출고",
+      "link": "https://motemote.kr",
+      "image": "",
+      "shopIds": [
+        "shop_mwlemhp1l036"
+      ]
+    },
+    {
+      "id": "ev_mwlemhp2fzwr",
+      "title": "치이카와 마켓 신상 발매 (11/20)",
+      "type": "release",
+      "start": "2026-11-20",
+      "end": "",
+      "time": "11:00 (일본·한국 같은 시간)",
+      "location": "",
+      "items": [
+        {
+          "name": "iPhone18Pro 대응 카메라 커버 (전3종)",
+          "price": "¥2,728",
+          "note": "세금 포함"
+        },
+        {
+          "name": "애니메이션 『치이카와』 터치펜 (정전식 터치패널 전용 세트)",
+          "price": "¥1,580",
+          "note": "세금 포함"
+        },
+        {
+          "name": "폰데크루르 멀티컬러 파우더 (전6종)",
+          "price": "¥550",
+          "note": "세금 포함"
+        },
+        {
+          "name": "치이카와 파크 외출 파우치 (전4종)",
+          "price": "¥3,300",
+          "note": "세금 포함"
+        },
+        {
+          "name": "치이카와 파크 에코백 (전5종)",
+          "price": "¥3,080",
+          "note": "세금 포함"
+        },
+        {
+          "name": "치이카와 파크 지퍼 파카 가와이상 (M/L)",
+          "price": "¥7,920",
+          "note": "세금 포함"
+        },
+        {
+          "name": "싸서 보온 핸드커치프 (전3종)",
+          "price": "¥1,650",
+          "note": "세금 포함"
+        }
+      ],
+      "description": "치이카와 마켓(공식 통판) 11/20(금) 11시 발매·취급 시작",
+      "link": "https://chiikawamarket.jp",
+      "image": "",
+      "shopIds": [
+        "shop_mwlemhp1jlwn"
+      ]
     }
   ]
 }
