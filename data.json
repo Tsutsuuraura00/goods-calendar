@@ -1,6 +1,6 @@
 {
   "siteTitle": "굿즈 발매 캘린더",
-  "updatedAt": "2026-11-18T01:04:49.096Z",
+  "updatedAt": "2026-11-18T01:04:53.888Z",
   "shops": [
     {
       "id": "shop_mwepkj2h8axb",
@@ -900,11 +900,14 @@
     },
     {
       "id": "ev_mwlemhp20kse",
-      "title": "타오바오 미니소 × 치이카와 신상 발매",
+      "title": "타오바오 미니소 × 치이카와 릴렉스블루",
       "type": "release",
       "start": "2026-11-23",
       "end": "",
       "time": "00:00 (중국 시간, 한국 01:00)",
+      "shopIds": [
+        "shop_mwlemhp18m5u"
+      ],
       "location": "",
       "items": [
         {
@@ -928,12 +931,9 @@
           "note": ""
         }
       ],
-      "description": "11월 23일 0시(중국 시간) 4종 신상 발매. 상품명은 이미지를 보고 붙인 이름",
-      "link": "",
-      "image": "",
-      "shopIds": [
-        "shop_mwlemhp18m5u"
-      ]
+      "description": "11월 23일 0시(중국 시간) 4종 신상 발매",
+      "link": "https://world.taobao.com/",
+      "image": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjExMTdfMjM3%2FMDAxNzk0OTE3MzE4Nzcy.50I20Kv4Xh98F8vZ0ATHdB0gtMa6vAn95lOrcn_i95og.J4Tq5N2_g94hOOmjoouVngBPG2OKjtfIbNXTK-5ozC0g.PNG%2F%25BA%25ED%25B7%25CE%25B1%25D7_%25BD%25E6%25B3%25D7%25C0%25CF_%25281%2529.png&type=a340"
     },
     {
       "id": "ev_mwlemhp2mhrb",
