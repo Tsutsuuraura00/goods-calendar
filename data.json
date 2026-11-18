@@ -1,6 +1,6 @@
 {
   "siteTitle": "굿즈 발매 캘린더",
-  "updatedAt": "2026-11-18T01:04:53.888Z",
+  "updatedAt": "2026-11-18T01:08:47.076Z",
   "shops": [
     {
       "id": "shop_mwepkj2h8axb",
@@ -705,6 +705,9 @@
       "start": "2026-11-20",
       "end": "",
       "time": "11:00",
+      "shopIds": [
+        "shop_mweq59d700vv"
+      ],
       "location": "",
       "items": [
         {
@@ -750,10 +753,7 @@
       ],
       "description": "일본 치이카와마켓 11월 20일(금) 오전 11시 신상 발매.\n· 캔디토이: 마그넷 컬렉션껌, 마시멜로풍 스티커, 데코스티커, 캐라맛네츠5\n· 의류·잡화 (TSUYOKU NATTA / MAGICAL CHIIKAWA): 티셔츠, 토트백, 긴소매 티셔츠, 지퍼파카\n출처: 치이카와마켓 공식 X",
       "link": "https://x.com/chiikawa_market/status/2122254124276416873",
-      "image": "https://pbs.twimg.com/media/HXPC3_pbQAAo0VV?format=jpg&name=large",
-      "shopIds": [
-        "shop_mweq59d700vv"
-      ]
+      "image": "https://pbs.twimg.com/media/HXPC3_pbQAAo0VV?format=jpg&name=large"
     },
     {
       "id": "ev_mwk03d032sew",
@@ -942,6 +942,10 @@
       "start": "2026-11-21",
       "end": "2026-11-24",
       "time": "",
+      "shopIds": [
+        "shop_mwevxnwqixm1",
+        "shop_mwevxnwqvurt"
+      ],
       "location": "",
       "items": [
         {
@@ -951,12 +955,8 @@
         }
       ],
       "description": "극장판 『치이카와 인어섬의 비밀』 관람 특전. 자세한 내용은 극장 홈페이지·앱 확인",
-      "link": "",
-      "image": "",
-      "shopIds": [
-        "shop_mwevxnwqixm1",
-        "shop_mwevxnwqvurt"
-      ]
+      "link": "https://cgv.co.kr/?NaPm=ct%3Dmwlf79zp%7Cci%3Dcheckout%7Ctr%3Dds%7Ctrx%3Dnull%7Chk%3D4b07fe919214fdf2ad9d6878aef19f22b102e65c",
+      "image": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjExMThfNDgg%2FMDAxNzk0OTYwNzc4MTA5.WYWo1SPtaHz89o87oioRCyvMxZ69ZptDHoyOWd4F12wg.KTV-qpOLzqaDILkirs5rHrjkx5KTMOkLHBXnKRio9J4g.JPEG%2Fe22b458cc2d3a30df764f9a5d5acffbe544616b3.jpeg&type=sc960_832"
     },
     {
       "id": "ev_mwlemhp2acmm",
@@ -1009,6 +1009,9 @@
       "start": "2026-11-28",
       "end": "",
       "time": "",
+      "shopIds": [
+        "shop_mwevxnwqvurt"
+      ],
       "location": "메가박스 대구신세계(동대구), 목동, 송도(트리플스트리트), 수원AK플라자(수원역)",
       "items": [
         {
@@ -1019,10 +1022,7 @@
       ],
       "description": "극장판 『치이카와 인어섬의 비밀』 응원봉 상영회. 자세한 내용은 극장 홈페이지·앱 확인",
       "link": "",
-      "image": "",
-      "shopIds": [
-        "shop_mwevxnwqvurt"
-      ]
+      "image": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjExMThfMTI5%2FMDAxNzk0OTU4NzIyMTA0.dJYubscXBIkXFhCrVBACQjKodpwljUk3Z7zze43_mP8g.dOCEGVg8abyblhfK-_FQLElsMBo_zo3jcgHeS587s4Yg.JPEG%2FIMG%25A3%25DF4863.jpg&type=sc960_832"
     },
     {
       "id": "ev_mwlemhp2n6wj",
@@ -1031,6 +1031,9 @@
       "start": "2026-11-29",
       "end": "",
       "time": "",
+      "shopIds": [
+        "shop_mwevxnwqvurt"
+      ],
       "location": "메가박스 대전신세계아트앤사이언스, 코엑스, 홍대",
       "items": [
         {
@@ -1041,10 +1044,7 @@
       ],
       "description": "극장판 『치이카와 인어섬의 비밀』 응원봉 상영회. 자세한 내용은 극장 홈페이지·앱 확인",
       "link": "",
-      "image": "",
-      "shopIds": [
-        "shop_mwevxnwqvurt"
-      ]
+      "image": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjExMThfMTI5%2FMDAxNzk0OTU4NzIyMTA0.dJYubscXBIkXFhCrVBACQjKodpwljUk3Z7zze43_mP8g.dOCEGVg8abyblhfK-_FQLElsMBo_zo3jcgHeS587s4Yg.JPEG%2FIMG%25A3%25DF4863.jpg&type=sc960_832"
     },
     {
       "id": "ev_mwlemhp2crur",
@@ -1053,6 +1053,9 @@
       "start": "2026-11-20",
       "end": "2026-11-23",
       "time": "11/20 18:00 ~ 11/23 23:59",
+      "shopIds": [
+        "shop_mwlemhp1l036"
+      ],
       "location": "",
       "items": [
         {
@@ -1083,10 +1086,7 @@
       ],
       "description": "2027년 2월까지 제작 완료되는 수량부터 순차 출고",
       "link": "https://motemote.kr",
-      "image": "",
-      "shopIds": [
-        "shop_mwlemhp1l036"
-      ]
+      "image": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjExMTdfMjg1%2FMDAxNzk0ODUxMzUzMzg3.68aMjTAoj0C3COcJL5PmDd3kIdS3JbN_8NFlTbn2UC4g.hAAKEnrpwyZ4Oz71K_f43uJHJjcj-jwvaAUrqz52LGog.JPEG%2FHXPmWNXawAAOyoJ.jpg&type=sc960_832"
     },
     {
       "id": "ev_mwlemhp2fzwr",
