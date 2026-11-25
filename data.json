@@ -1,6 +1,6 @@
 {
   "siteTitle": "굿즈 발매 캘린더",
-  "updatedAt": "2026-11-18T09:01:50.207Z",
+  "updatedAt": "2026-11-25T03:09:58.036Z",
   "shops": [
     {
       "id": "shop_mwepkj2h8axb",
@@ -110,7 +110,7 @@
       "id": "shop_mwizxkjn739j",
       "name": "PARADE 캡슐토이",
       "kind": "offline",
-      "url": "https://www.parade-inc.net/products/c261110",
+      "url": "https://www.parade-inc.net/",
       "address": "전국 캡슐토이 자판기",
       "note": "파레드(PARADE) 캡슐토이"
     },
@@ -185,6 +185,62 @@
       "url": "https://www.popcondplay.com/",
       "address": "",
       "note": "팝업스토어 사전 예약"
+    },
+    {
+      "id": "shop_mwvjpfaal1ra",
+      "name": "애니마이쿠지 (세븐일레븐·이토요카도)",
+      "kind": "offline",
+      "url": "https://anymy.jp/",
+      "address": "일본 전국 세븐일레븐 · 이토요카도",
+      "note": ""
+    },
+    {
+      "id": "shop_mwvjpfaaltcd",
+      "name": "TALKING ODM",
+      "kind": "online",
+      "url": "https://odm-shop.talking.design/",
+      "address": "",
+      "note": "커스텀 굿즈 제작"
+    },
+    {
+      "id": "shop_mwvjpfaa0von",
+      "name": "ANA 공항 매장",
+      "kind": "offline",
+      "url": "https://www.astyle.jp/astyle/s/02/chiikawa-ana/",
+      "address": "일본 각 공항 매장",
+      "note": "ANA 그룹과 별도 운영"
+    },
+    {
+      "id": "shop_mwvjpfaakz0h",
+      "name": "치이카와야키 이온몰 마쿠하리신토심점",
+      "kind": "offline",
+      "url": "https://chiikawa-yaki.shop/",
+      "address": "千葉県千葉市美浜区豊砂1-1 イオンモール幕張新都心",
+      "note": "영업 10:00~21:00 · 부정기 휴무"
+    },
+    {
+      "id": "shop_mwvjpfaaynej",
+      "name": "엔스카이 잡화",
+      "kind": "both",
+      "url": "",
+      "address": "치이카와랜드 · 치이카와마켓 · 일본 전국 잡화점",
+      "note": "공식 X @ensky_ZAKKA"
+    },
+    {
+      "id": "shop_mwvjpfaas2ev",
+      "name": "에버랜드",
+      "kind": "offline",
+      "url": "https://www.everland.com/everland/home/main",
+      "address": "경기 용인시",
+      "note": ""
+    },
+    {
+      "id": "shop_mwvjpfaadc4j",
+      "name": "캐리비안베이",
+      "kind": "offline",
+      "url": "https://www.everland.com/caribbeanbay/home/main",
+      "address": "경기 용인시",
+      "note": ""
     }
   ],
   "events": [
@@ -1210,6 +1266,377 @@
       "image": "",
       "shopIds": [
         "shop_mwlw6zlc68at"
+      ]
+    },
+    {
+      "id": "ev_mwvjpfab6soi",
+      "title": "[캡슐토이] 치이카와 오쵸코 3",
+      "type": "release",
+      "start": "2026-11-21",
+      "end": "2026-11-30",
+      "time": "11월 하순 순차 발매",
+      "location": "전국 캡슐토이 자판기",
+      "items": [
+        {
+          "name": "치이카와 오쵸코 3 (총 6종)",
+          "price": "500엔",
+          "note": "약 H47×W53mm · 용량 60ml · 도자기(깨짐 주의)"
+        }
+      ],
+      "description": "치이카와 오쵸코(작은 술잔) 3. 캡슐 장난감, 총 6종, 1회 500엔.\n구이와 마실 수 있는 60ml 사이즈! 반찬이나 차로 한숨 돌리기에도.\n2026년 11월 하순부터 순차 발매 예정 (정확한 날짜 미정 → 11/21~11/30로 입력).",
+      "link": "https://www.parade-inc.net/products/c261101",
+      "image": "https://www.parade-inc.net/wp-parade/wp-content/uploads/2026/11/261019_chiikawa_ochoko3_1.jpg",
+      "shopIds": [
+        "shop_mwizxkjn739j"
+      ]
+    },
+    {
+      "id": "ev_mwvjpfab1joc",
+      "title": "[엔스카이] 치이카와 미타메모 북클립 2",
+      "type": "release",
+      "start": "2026-11-21",
+      "end": "2026-11-30",
+      "time": "11월 하순 순차 발매",
+      "location": "치이카와랜드, 치이카와마켓, 일본 전국 잡화점 등",
+      "items": [
+        {
+          "name": "미타메모 북클립 2",
+          "price": "",
+          "note": "앞뒷면 디자인이 다른 책 모양 북클립"
+        }
+      ],
+      "description": "엔스카이 잡화 치이카와 신제품. 외관도 책 같은 북클립으로, 앞면과 뒷면이 다른 디자인.\n치이카와랜드, 치이카와마켓, 전국 잡화점 등에서 11월 하순부터 순차 발매 예정 (정확한 날짜 미정 → 11/21~11/30로 입력).\n출처: 엔스카이 잡화 공식 X",
+      "link": "https://x.com/ensky_ZAKKA/status/2123612296912196067",
+      "image": "",
+      "shopIds": [
+        "shop_mwvjpfaaynej"
+      ]
+    },
+    {
+      "id": "ev_mwvjpfabp5eb",
+      "title": "[엔스카이] 치이카와 시링 핀즈",
+      "type": "release",
+      "start": "2026-11-21",
+      "end": "2026-11-30",
+      "time": "11월 하순 순차 발매",
+      "location": "치이카와랜드, 치이카와마켓, 일본 전국 잡화점 등",
+      "items": [
+        {
+          "name": "시링 핀즈",
+          "price": "",
+          "note": "실링 스탬프풍 메탈 핀즈 · 라메 + 흔들리는 비즈 참"
+        }
+      ],
+      "description": "엔스카이 잡화 치이카와 신제품. 실링 스탬프풍 디자인의 메탈 핀즈로, 반짝이는 라메가 들어가고 흔들리는 비즈 참이 달려 있음.\n치이카와랜드, 치이카와마켓, 전국 잡화점 등에서 11월 하순부터 순차 발매 예정 (정확한 날짜 미정 → 11/21~11/30로 입력).\n출처: 엔스카이 잡화 공식 X",
+      "link": "https://x.com/ensky_ZAKKA/status/2123612319208907021",
+      "image": "",
+      "shopIds": [
+        "shop_mwvjpfaaynej"
+      ]
+    },
+    {
+      "id": "ev_mwvjpfab5pzl",
+      "title": "[극장판 치이카와] 9주차 평일 특전 - CGV",
+      "type": "etc",
+      "start": "2026-11-25",
+      "end": "2026-12-01",
+      "time": "",
+      "location": "CGV 진행 극장 40곳 (설명 참고)",
+      "items": [
+        {
+          "name": "비행 씬 피규어 (랜덤 1종)",
+          "price": "",
+          "note": "토끼&하늘다람쥐 / 치이카와&가르마 구성 2종 중 랜덤 1종 증정"
+        }
+      ],
+      "description": "극장판 치이카와: 인어섬의 비밀 9주차 평일 현장 증정 — 비행 씬 피규어 2종 (토끼&하늘다람쥐, 치이카와&가르마 구성 / 랜덤 1종 증정).\n증정 기간: 11/25(수) ~ 12/1(화)\n\n진행 극장 (40곳):\n강남, 강변, 고덕강일, 광주상무, 김포, 대구스타디움, 대구한일, 대전탄방, 동수원, 동탄, 부천, 상봉, 성신여대입구, 세종, 센텀시티, 소풍, 수유, 스타필드시티위례, 신촌아트레온, 안산, 야탑, 양주옥정, 여의도, 연남, 영등포타임스퀘어, 왕십리, 용산아이파크몰, 울산삼산, 의정부, 인천, 일산, 전주효자, 중계, 창원더시티, 천안터미널, 천안펜타포트, 청주(서문), 파주운정, 평택, 홍대\n\n자세한 내용은 극장 홈페이지 및 앱 확인.",
+      "link": "",
+      "image": "",
+      "shopIds": [
+        "shop_mwevxnwqixm1"
+      ]
+    },
+    {
+      "id": "ev_mwvjpfab6q6h",
+      "title": "[극장판 치이카와] 9주차 평일 특전 - 롯데시네마",
+      "type": "etc",
+      "start": "2026-11-25",
+      "end": "2026-12-01",
+      "time": "",
+      "location": "롯데시네마 진행 극장 33곳 (설명 참고)",
+      "items": [
+        {
+          "name": "비행 씬 피규어 (랜덤 1종)",
+          "price": "",
+          "note": "토끼&하늘다람쥐 / 치이카와&가르마 구성 2종 중 랜덤 1종 증정"
+        }
+      ],
+      "description": "극장판 치이카와: 인어섬의 비밀 9주차 평일 현장 증정 — 비행 씬 피규어 2종 (토끼&하늘다람쥐, 치이카와&가르마 구성 / 랜덤 1종 증정).\n증정 기간: 11/25(수) ~ 12/1(화)\n\n진행 극장 (33곳):\n건대입구, 검단아라, 광복, 광주(백화점), 군산몰, 김포공항, 노원, 대전센트럴, 동래, 동성로, 부산본점, 부천(신중동역), 부평역사, 산본피트인, 수완(아울렛), 수원(수원역), 수지, 시흥장현, 신림, 안산(롯데마트), 영등포, 용산, 울산(백화점), 원주무실, 월드타워, 은평(롯데몰), 전주(백화점), 제주연동, 청량리, 파주운정, 판교(창조경제밸리), 평촌(범계역), 홍대입구\n\n자세한 내용은 극장 홈페이지 및 앱 확인.",
+      "link": "",
+      "image": "",
+      "shopIds": [
+        "shop_mwevxnwqvi48"
+      ]
+    },
+    {
+      "id": "ev_mwvjpfabmzas",
+      "title": "[극장판 치이카와] 9주차 평일 특전 - 메가박스",
+      "type": "etc",
+      "start": "2026-11-25",
+      "end": "2026-12-01",
+      "time": "",
+      "location": "메가박스 진행 극장 38곳 (설명 참고)",
+      "items": [
+        {
+          "name": "비행 씬 피규어 (랜덤 1종)",
+          "price": "",
+          "note": "토끼&하늘다람쥐 / 치이카와&가르마 구성 2종 중 랜덤 1종 증정"
+        }
+      ],
+      "description": "극장판 치이카와: 인어섬의 비밀 9주차 평일 현장 증정 — 비행 씬 피규어 2종 (토끼&하늘다람쥐, 치이카와&가르마 구성 / 랜덤 1종 증정).\n증정 기간: 11/25(수) ~ 12/1(화)\n\n진행 극장 (38곳):\n강남, 고양스타필드, 광명AK플라자, 구미강동, 구의이스트폴, 금정AK플라자, 김포한강신도시, 남양주현대아울렛스페이스원, 대구신세계(동대구), 대구이시아, 대전신세계아트앤사이언스, 대전유성, 대전중앙로, 대전현대프리미엄아울렛, 더부티크목동현대백화점, 마곡, 목동, 백석벨라시타, 부천스타필드시티, 분당, 사상, 상봉, 상암월드컵경기장, 세종나성, 센트럴, 송도(트리플스트리트), 수원AK플라자(수원역), 수원스타필드, 수원인계, 안성스타필드, 양산증산, 인천학익(시티오씨엘), 청주터미널, 춘천석사, 코엑스, 킨텍스, 하남스타필드, 홍대\n\n자세한 내용은 극장 홈페이지 및 앱 확인.",
+      "link": "",
+      "image": "",
+      "shopIds": [
+        "shop_mwevxnwqvurt"
+      ]
+    },
+    {
+      "id": "ev_mwvjpfablenc",
+      "title": "[극장판 치이카와] 9주차 평일 특전 - 씨네Q",
+      "type": "etc",
+      "start": "2026-11-25",
+      "end": "",
+      "time": "",
+      "location": "씨네Q 진행 극장 6곳 (설명 참고)",
+      "items": [
+        {
+          "name": "비행 씬 피규어 (랜덤 1종)",
+          "price": "",
+          "note": "토끼&하늘다람쥐 / 치이카와&가르마 구성 2종 중 랜덤 1종 증정"
+        }
+      ],
+      "description": "극장판 치이카와: 인어섬의 비밀 9주차 평일 현장 증정 — 비행 씬 피규어 2종 (토끼&하늘다람쥐, 치이카와&가르마 구성 / 랜덤 1종 증정).\n증정 기간: 11/25(수) ~ 소진 시\n\n진행 극장 (6곳):\n경주보문, 광교상현, 구미봉곡, 대구경산, 신도림, 청라\n\n자세한 내용은 극장 홈페이지 및 앱 확인.",
+      "link": "",
+      "image": "",
+      "shopIds": [
+        "shop_mwevxnwqpsz7"
+      ]
+    },
+    {
+      "id": "ev_mwvjpfabvszl",
+      "title": "[TALKING ODM] 치이카와 크리스마스 디자인 커스텀 굿즈",
+      "type": "release",
+      "start": "2026-11-25",
+      "end": "",
+      "time": "",
+      "location": "",
+      "items": [
+        {
+          "name": "NEW 회전 아크릴 스탠드",
+          "price": "",
+          "note": ""
+        },
+        {
+          "name": "NEW 라이팅 아크릴 스탠드",
+          "price": "",
+          "note": ""
+        },
+        {
+          "name": "NEW 양말",
+          "price": "",
+          "note": ""
+        },
+        {
+          "name": "티셔츠 / 긴소매 티셔츠 / 스웨트",
+          "price": "",
+          "note": ""
+        },
+        {
+          "name": "ZIP 파카 / 풀오버 파카",
+          "price": "",
+          "note": ""
+        },
+        {
+          "name": "에코백 / 토트백",
+          "price": "",
+          "note": ""
+        },
+        {
+          "name": "미니 타월 / 머그컵 / 블랭킷",
+          "price": "",
+          "note": ""
+        }
+      ],
+      "description": "기간 한정 치이카와 크리스마스 디자인 등장! 좋아하는 디자인을 골라 오리지널 굿즈를 만드는 커스텀 굿즈.\n디자인 5종: クリスマスの精(크리스마스 요정) / 両あし入れるの!?(두 발 다 넣는 거야!?) / はいてみちゃったり…(신어 버렸다…) / クリスマスツリーなうさぎ(크리스마스 트리 우사기) / まだちょっと…早いよねぇ?(아직 좀… 이르지?)\n※ 판매 시작일·기간은 공식 페이지 확인 필요 (11/25로 임시 입력).",
+      "link": "https://odm-shop.talking.design/blogs/news/ck-christmas-2026-lp",
+      "image": "https://cdn.shopify.com/s/files/1/0786/0538/6009/files/261125_odm_ck_chiikawachristmas_sns_top_lp_02.png?v=1795140891",
+      "shopIds": [
+        "shop_mwvjpfaaltcd"
+      ]
+    },
+    {
+      "id": "ev_mwvjpfablbeo",
+      "title": "[ANA] 치이카와 ANA 굿즈 공항 매장 신규 취급",
+      "type": "release",
+      "start": "2026-11-26",
+      "end": "",
+      "time": "",
+      "location": "일본 각 공항 매장 (설명 참고)",
+      "items": [
+        {
+          "name": "치이카와 × ANA 굿즈",
+          "price": "",
+          "note": "매장별 라인업·수량 상이"
+        }
+      ],
+      "description": "11월 26일(목)부터 신규 취급 시작. 매장마다 판매 굿즈 라인업과 수량이 다름.\n\n① 당일 항공권 소지자만 이용 가능 (보안검색장 통과 후 구역)\n· 이타미 공항: 이타미 공상\n· 간사이 국제공항 제1터미널: 간사이 여정일기 국내 게이트점 / KIX DUTY FREE 북윙 중간점 / KIX DUTY FREE 북윙 선단점 / 카와이이 버즈\n· 간사이 국제공항 제2터미널: 간사이 여정일기 국내 게이트점 / 잇핀산. 마르쉐\n· 아소 구마모토 공항: ASORA 게이트점 / 구마모토 슌사이칸\n\n② 비행기에 탑승하지 않아도 이용 가능\n· 메만베츠 공항: 무라 이치반\n· 나리타 공항 제1터미널: 하쿠힌칸 TOY PARK\n· 시즈오카 공항: 시즈오카 마르쉐\n· 츄부 국제공항: yb.Friend's 센트레아\n· 고베 공항: 간사이 여정일기\n· 돗토리 공항: 킨사이야\n· 이와쿠니 공항: 스카이숍 아이 아이\n· 아소 구마모토 공항: ASORA 로비점 / 구마모토 슌사이칸 공항 1F 로비점\n\n※ 각 매장은 ANA 그룹과 별도 운영. 매장에 라인업·재고·보충 문의는 삼가 주세요.",
+      "link": "https://www.astyle.jp/astyle/s/02/chiikawa-ana/",
+      "image": "https://www.astyle.jp/astyle/contents/shop/astyle/s/02/chiikawa-ana/image/chiikawa-ana_h1_261013.jpg",
+      "shopIds": [
+        "shop_mwvjpfaa0von"
+      ]
+    },
+    {
+      "id": "ev_mwvjpfab9up2",
+      "title": "[치이카와야키] 이온몰 마쿠하리신토심점 1주년 신상",
+      "type": "release",
+      "start": "2026-11-27",
+      "end": "2027-01-11",
+      "time": "10:00~21:00",
+      "location": "千葉県千葉市美浜区豊砂1-1 イオンモール幕張新都心",
+      "items": [
+        {
+          "name": "모몽가 (메이플 버터 앙)",
+          "price": "350엔",
+          "note": "겨울 한정 · 11/27~1/11"
+        },
+        {
+          "name": "쿠리만주 (감주 밀크 크림)",
+          "price": "350엔",
+          "note": "겨울 한정 · 12/7~1/11"
+        },
+        {
+          "name": "라코 (캐러멜 크림)",
+          "price": "350엔",
+          "note": "겨울 한정 · 12/14~1/11"
+        },
+        {
+          "name": "치이카와야키 마스코트 · 모몽가",
+          "price": "1,650엔",
+          "note": "1인 각 1점"
+        },
+        {
+          "name": "치이카와야키 마스코트 · 쿠리만주",
+          "price": "1,650엔",
+          "note": "1인 각 1점"
+        },
+        {
+          "name": "치이카와야키 마스코트 · 라코",
+          "price": "1,650엔",
+          "note": "1인 각 1점"
+        },
+        {
+          "name": "냉동 치이카와야키 · 치이카와 (팥앙)",
+          "price": "350엔",
+          "note": "개별 포장"
+        },
+        {
+          "name": "냉동 치이카와야키 · 하치와레 (크림)",
+          "price": "350엔",
+          "note": "개별 포장"
+        },
+        {
+          "name": "냉동 치이카와야키 · 우사기 (초콜릿)",
+          "price": "350엔",
+          "note": "개별 포장"
+        },
+        {
+          "name": "치이카와야키 보냉 런치백",
+          "price": "2,530엔",
+          "note": "오리지널 디자인"
+        }
+      ],
+      "description": "치이카와야키 이온몰 마쿠하리신토심점 1주년 기념. 11/27(금)부터 겨울 한정 맛 3종, 마스코트 신작 3종, 냉동 상품, 보냉 런치백 판매 개시.\n· 겨울 한정 맛은 맛마다 판매 시작일이 다름 (모몽가 11/27, 쿠리만주 12/7, 라코 12/14 / 모두 1/11까지)\n· 12/19(토)부터 3개·6개 구매 시 겨울 한정 박스 제공 (소진 시 종료)\n· 영업 10:00~21:00 (부정기 휴무)\n· 프리 입장 + 일부 사전예약제: 11/27~12/25 사전예약 가능, 전날 10:00부터 선착순 접수\n· 한정 맛은 매장에 따라 구매 개수 제한 있을 수 있음, 굿즈는 1인 각 1점\n출처: PR TIMES (주식회사 구리코)",
+      "link": "https://prtimes.jp/main/html/rd/p/000000026.000157539.html",
+      "image": "https://prcdn.freetls.fastly.net/release_image/157539/26/157539-26-fc69515c904f3b6e945a5e7933f9c9e2-2384x1684.png?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff",
+      "shopIds": [
+        "shop_mwvjpfaakz0h"
+      ]
+    },
+    {
+      "id": "ev_mwvjpfabziua",
+      "title": "[캐리비안베이 × 먼작귀] 윈터 스파 캐비",
+      "type": "etc",
+      "start": "2026-12-03",
+      "end": "2027-03-01",
+      "time": "",
+      "location": "캐리비안베이",
+      "items": [],
+      "description": "캐리비안베이 × 먼작귀 콜라보 '윈터 스파 캐비'.\n기간: 2026.12.3(목) ~ 2027.3.1(월)\n세부 내용은 추후 공개 (Coming Soon).",
+      "link": "https://www.everland.com/caribbeanbay/home/main",
+      "image": "https://www.everland.com/contents/ia/contents/banner/f6c2680948ed4b5cb06cb8d15b4e3575.jpg",
+      "shopIds": [
+        "shop_mwvjpfaadc4j"
+      ]
+    },
+    {
+      "id": "ev_mwvjpfabz5lx",
+      "title": "[치이카와 크리스마스 마켓] 굿즈 온라인 예약판매",
+      "type": "preorder",
+      "start": "2026-12-04",
+      "end": "2026-12-25",
+      "time": "12/4 11:00 ~ 12/25 23:59",
+      "location": "",
+      "items": [
+        {
+          "name": "치이카와 크리스마스 마켓 굿즈",
+          "price": "",
+          "note": "대상 상품·신청 방법은 추후 안내"
+        }
+      ],
+      "description": "『치이카와 크리스마스 마켓』 굿즈를 구매하지 못한 분들을 위해 「치이카와 포켓 굿즈 스토어(온라인 스토어)」에서 예약 판매 실시.\n접수 기간: 12/4(금) 11:00 ~ 12/25(금) 23:59\n※ 접속이 집중될 수 있음. 상한에 도달하면 즉시 종료.\n대상 상품이나 신청 방법 등 세부 사항은 추후 안내 예정.",
+      "link": "https://x.com/chiikawa_xmas/status/2125165080686088594",
+      "image": "",
+      "shopIds": [
+        "shop_mwepkj2h8axb"
+      ]
+    },
+    {
+      "id": "ev_mwvjpfab9syo",
+      "title": "[애니마이쿠지] 치이카와 12월 쿠지",
+      "type": "lottery",
+      "start": "2026-12-12",
+      "end": "",
+      "time": "",
+      "location": "일본 전국 세븐일레븐 · 이토요카도 점포",
+      "items": [
+        {
+          "name": "애니마이쿠지 치이카와",
+          "price": "1회 950.40엔",
+          "note": "부가세 포함"
+        }
+      ],
+      "description": "애니마이쿠지 치이카와 12월 경품. 2026년 12월 12일(토)부터 발매 예정.\n메이커 희망 소매가격: 1회 950.40엔 (부가세 포함)\n취급점: 전국 세븐일레븐, 이토요카도 점포\n※ 상품이 없어지는 대로 종료. 점포에 따라 취급 중지·발매 시기 상이, 일부 점포는 취급 없음.",
+      "link": "https://anymy.jp/kuji/projects/31",
+      "image": "https://s3.ap-northeast-1.amazonaws.com/img.fancommerce.jp/prod-anymy_/62db7999-1fbf-4af4-86d8-c6e1f3954e29_4568fcbb-979f-4729-9ee4-1ae79454e604.jpg",
+      "shopIds": [
+        "shop_mwvjpfaal1ra"
+      ]
+    },
+    {
+      "id": "ev_mwvjpfacitdn",
+      "title": "[에버랜드 × 먼작귀] 홀리데이 위시",
+      "type": "etc",
+      "start": "2026-12-19",
+      "end": "2027-03-24",
+      "time": "",
+      "location": "에버랜드",
+      "items": [],
+      "description": "에버랜드 × 먼작귀 콜라보 '홀리데이 위시'.\n기간: 2026.12.19(토) ~ 2027.3.24(수)\n세부 내용은 추후 공개 (Coming Soon).",
+      "link": "https://www.everland.com/everland/home/main",
+      "image": "https://www.everland.com/contents/ia/contents/banner/3d26b2ae856b4525adc6ff9eb038cc21.jpg",
+      "shopIds": [
+        "shop_mwvjpfaas2ev"
       ]
     }
   ]
